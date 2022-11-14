@@ -7,39 +7,40 @@
                 <div class="row card1">
                     <a data-toggle="collapse" data-bs-parent="#accordion" data-bs-toggle="collapse" href="#collapseTwo">
                         <i class="fa fa-times-circle" style="float: right; color: white; font-size:24px"></i></a>
+                        <h6 style="color: white;text-align: center;">View Course</h6>
                     <div class="col-md-3">
                         <div class="servicesHome-box">
                             <ul>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/school"
-                                    routerLinkActive="active"> Preschool</a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/school"
-                                    routerLinkActive="active"> Standard 11 to 12 </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.Com. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.Sc. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> M.Ed. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> Ph.D. </a></li>
+                                <li (click)="searchSchool('preschool')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i>Preschool</li>
+                                <li (click)="searchSchool('std11to12')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i>Standard 11 to 12</li>
+                                <li (click)="searchSchool('bcom')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.Com.</li>
+                                <li (click)="searchSchool('bsc')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.Sc.</li>
+                                <li (click)="searchSchool('med')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> M.Ed.</li>
+                                <li (click)="searchSchool('phd')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> Ph.D.</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="servicesHome-box">
                             <ul style="color:white">
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/school"
-                                    routerLinkActive="active"> Standard 1 to 5 </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.A. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.Ed. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> MLT </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> M.S.W. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.Sc. IT </a></li>
+                                <li (click)="searchSchool('std1to5')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> Standard 1 to 5</li>
+                                <li (click)="searchSchool('ba')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.A.</li>
+                                <li (click)="searchSchool('bed')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.Ed.</li>
+                                <li (click)="searchSchool('mlt')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> MLT</li>
+                                <li (click)="searchSchool('msw')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> M.S.W.</li>
+                                <li (click)="searchSchool('bscit')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.Sc. IT</li>
                             </ul>
                         </div>
                     </div>
@@ -47,34 +48,34 @@
                     <div class="col-md-3">
                         <div class="servicesHome-box">
                             <ul style="color:white">
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/school"
-                                    routerLinkActive="active"> Standard 6 to 8 </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.B.A. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.P.Ed. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> M.A. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> M.Sc. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> View All </a></li>
+                                <li (click)="searchSchool('std6to8')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> Standard 6 to 8</li>
+                                <li (click)="searchSchool('bba')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.B.A.</li>
+                                <li (click)="searchSchool('bped')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.P.Ed.</li>
+                                <li (click)="searchSchool('ma')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> M.A.</li>
+                                <li (click)="searchSchool('msc')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> M.Sc.</li>
+                                <li (click)="searchSchool('all')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> View All</li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="servicesHome-box">
                             <ul style="color:white">
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/school"
-                                    routerLinkActive="active"> Standard 9 to 10 </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.C.A. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> B.S.W. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> M.Com. </a></li>
-                                <li><i class="fa fa-check-square"></i> <a class="white" routerLink="/academic/colleges"
-                                    routerLinkActive="active"> P.T.C. </a></li>
+                                <li (click)="searchSchool('std9to10')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> Standard 9 to 10</li>
+                                <li (click)="searchSchool('bca')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.C.A.</li>
+                                <li (click)="searchSchool('bsw')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> B.S.W.</li>
+                                <li (click)="searchSchool('mcom')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> M.Com.</li>
+                                <li (click)="searchSchool('ptc')" data-bs-toggle="collapse" href="#collapseTwo"><i
+                                        class="fa fa-arrow-right"></i> P.T.C.</li>
                             </ul>
                         </div>
                     </div>
@@ -83,6 +84,7 @@
         </section>
     </div>
 </div>
+
 
 <div class="full-width-header header-style1 home1-modifiy">
     <header id="rs-header" class="rs-header">
@@ -99,7 +101,7 @@
                             <li>
                                 <i class="flaticon-phone"></i>
                                 <a href="tel:02692-243083" style="font-size:12px !important;">02692-243083</a>
-
+        
                             </li>
                         </ul>
                     </div>
@@ -813,3 +815,5 @@
     </header>
 
 </div>
+
+

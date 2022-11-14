@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-section-course',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionCourseComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router:Router
+  ) { }
 
   ngOnInit(): void {
   }
+  searchSchool(id:any){
+    this.router.navigate(['/more/search',id]);
 
+  }
 }

@@ -1,5 +1,6 @@
 
 import { Component, HostListener } from '@angular/core';
+import { Router } from '@angular/router';
 import { WebNavbar } from 'src/app/core/model/web-navbar.model';
 import { SharedService } from 'src/app/core/services/shared.service';
 
@@ -24,7 +25,8 @@ export class NavbarComponent {
     this.isSticky = window.pageYOffset >= 250;
   }
   constructor(
-    private sharedService: SharedService
+    private sharedService: SharedService,
+    private router:Router
   ) {
     this.getWebNavDetails();
   }
@@ -61,5 +63,8 @@ export class NavbarComponent {
 
     })
   }
+  searchSchool(id:any){
+    this.router.navigate(['/more/search',id]);
 
+  }
 }

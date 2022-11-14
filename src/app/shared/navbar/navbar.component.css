@@ -23,6 +23,7 @@ a{
 
 .secondToolbar {
     position: fixed;
+    display: none;
     top: 0;
     height: 0;
     opacity: 0;
@@ -35,6 +36,7 @@ a{
   .sticky {
     opacity: 1;
     transition: opacity .25s ease-out, height .15s ease;
+    display: block;
   }
 
   .jc{
