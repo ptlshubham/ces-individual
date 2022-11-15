@@ -224,8 +224,8 @@ div#button-container .btn .pillbtn {
         text-overflow: ellipsis;
         display: -webkit-box;
         line-height: 21px;
-        max-height: 48px;
-        -webkit-line-clamp: 2;
+        /* max-height: 48px; */
+        /* -webkit-line-clamp: 2; */
         -webkit-box-orient: vertical;
     }
     .student-corner .container {

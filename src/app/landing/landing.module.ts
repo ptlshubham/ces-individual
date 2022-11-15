@@ -16,6 +16,7 @@ import { HomeBannerComponent } from './home-banner/home-banner.component';
 import { ImageTextComponent } from './image-text/image-text.component';
 import { TextImageComponent } from './text-image/text-image.component';
 import { NewsMessageComponent } from './news-message/news-message.component';
+import { FacebookFeedComponent } from './facebook-feed/facebook-feed.component';
 
 
 
@@ -32,6 +33,8 @@ import { NewsMessageComponent } from './news-message/news-message.component';
     ImageTextComponent,
     TextImageComponent,
     NewsMessageComponent,
+    FacebookFeedComponent,
+    
   ],
   imports: [
     CommonModule,

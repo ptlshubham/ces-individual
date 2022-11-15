@@ -4978,6 +4978,7 @@ body .modal-backdrop {
 .rs-about .histort-part .single-history {
   display: block;
   margin-bottom: 30px;
+      margin-left: 26px;
 }
 .rs-about .histort-part .single-history a {
   padding: 28px 20px 22px;
@@ -15202,4 +15203,19 @@ body .modal-backdrop {
   100% {
     transform: scale(1.2);
   }
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

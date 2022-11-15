@@ -1,0 +1,37 @@
+.rs-about.style1 .about-part {
+    background: none;
+    border-radius: 5px;
+    margin-top: -60px;
+}
+
+@media only screen and (max-width: 575px)
+{
+    .rs-about.style1 .about-part {
+        padding: 40px 0px 50px;
+    }
+}
+.smalls{
+    display: none;
+}
+.fulls{
+    display: block;
+}
+iframe {
+    height: 600px !important;
+}
+@media only screen and (max-width: 767px){
+    .smalls{
+        display: block;
+    }
+    .fulls{
+        display: none;
+    }
+    iframe {
+        height: 391px !important;
+        width: 349px !important;
+    }
+}
+
+.rs-about.style1 .about-part{
+    padding: 0;
+}

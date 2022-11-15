@@ -10,6 +10,7 @@ import { FundComponent } from './fund/fund.component';
 import { AlumniComponent } from './alumni/alumni.component';
 import { CelebrationComponent } from './celebration/celebration.component';
 import { CounsellingComponent } from './counselling/counselling.component';
+import { BearersComponent } from './bearers/bearers.component';
 
 
 
@@ -22,7 +23,8 @@ import { CounsellingComponent } from './counselling/counselling.component';
     FundComponent,
     AlumniComponent,
     CelebrationComponent,
-    CounsellingComponent
+    CounsellingComponent,
+    BearersComponent
   ],
   imports: [
     CommonModule,
