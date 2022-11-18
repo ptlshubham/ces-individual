@@ -7720,7 +7720,7 @@ body .modal-backdrop {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.9;
+  opacity: 0.8;
   background: linear-gradient(transparent, #273c66);
 }
 .rs-degree.style1 .degree-wrap:hover .content-part {
@@ -13966,7 +13966,7 @@ body .modal-backdrop {
   font-size: 16px;
   font-weight: 500;
   color: #ffffff;
-  background: #d72b32;
+  background: #203154;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -15218,4 +15218,8 @@ td, th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+.theme-color{
+  color: #203154;
 }

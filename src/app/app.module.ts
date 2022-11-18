@@ -17,8 +17,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NgbModule,
     HttpClientModule,
     RouterModule.forRoot(AppRoutes, {
-      useHash: true
+      useHash: true, scrollPositionRestoration: 'enabled'
     }),
+    
     SharedModule,
     CarouselModule,
      

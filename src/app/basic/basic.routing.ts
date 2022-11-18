@@ -3,6 +3,7 @@ import { AboutComponent } from './about/about.component';
 import { AlumniComponent } from './alumni/alumni.component';
 import { BearersComponent } from './bearers/bearers.component';
 import { CelebrationComponent } from './celebration/celebration.component';
+import { ContactComponent } from './contact/contact.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { FundComponent } from './fund/fund.component';
 import { HistoryComponent } from './history/history.component';
@@ -43,6 +44,10 @@ export const BasicRoutes: Routes = [{
     {
         path: 'bearers',
         component: BearersComponent
+    },
+    {
+        path: 'contact',
+        component: ContactComponent
     }
     ]
 }];

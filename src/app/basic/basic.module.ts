@@ -11,6 +11,7 @@ import { AlumniComponent } from './alumni/alumni.component';
 import { CelebrationComponent } from './celebration/celebration.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { BearersComponent } from './bearers/bearers.component';
+import { ContactComponent } from './contact/contact.component';
 
 
 
@@ -24,7 +25,8 @@ import { BearersComponent } from './bearers/bearers.component';
     AlumniComponent,
     CelebrationComponent,
     CounsellingComponent,
-    BearersComponent
+    BearersComponent,
+    ContactComponent
   ],
   imports: [
     CommonModule,
