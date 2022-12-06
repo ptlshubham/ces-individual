@@ -14,17 +14,17 @@ export class FundComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getAllBeneficiaryDetails();
+    this.getAllDonnerDetails();
   }
   getAllBeneficiaryDetails() {
     this.donationService.getAllBeneficiaryDetailsData().subscribe((res: any) => {
       this.beneficiaryData = res;
-      debugger
     })
   }
   getAllDonnerDetails() {
     this.donationService.getAllDonnerDetailsData().subscribe((res: any) => {
       this.donnerData = res;
-      debugger
     })
   }
 }
