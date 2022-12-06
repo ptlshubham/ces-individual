@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { WebImageUpload } from 'src/app/core/model/web-image-upload';
+import { HomeService } from 'src/app/core/services/home.services';
 
 @Component({
   selector: 'app-home-slider',
@@ -7,13 +8,27 @@ import { WebImageUpload } from 'src/app/core/model/web-image-upload';
   styleUrls: ['./home-slider.component.css']
 })
 export class HomeSliderComponent implements OnInit {
-  public imageUploader: WebImageUpload[] = [];
-  public webImageUpload: WebImageUpload = new WebImageUpload;
+
+  imagesData: any = [];
+  sliderImages: any = [];
 
   constructor(
+    private homeService: HomeService
   ) { }
 
   ngOnInit(): void {
+    this.getImagesDataById();
   }
- 
+
+  getImagesDataById() {
+    this.sliderImages = [];
+    this.homeService.getBannersImagesById(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.imagesData = res;
+      this.imagesData.forEach((element: any) => {
+        if (element.purpose == 'slider') {
+          this.sliderImages.push(element);
+        }
+      });
+    })
+  }
 }
