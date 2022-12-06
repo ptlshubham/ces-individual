@@ -7,7 +7,6 @@ import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about/about.component';
 import { ManagementComponent } from './management/management.component';
 import { FundComponent } from './fund/fund.component';
-import { AlumniComponent } from './alumni/alumni.component';
 import { CelebrationComponent } from './celebration/celebration.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { BearersComponent } from './bearers/bearers.component';
@@ -22,7 +21,6 @@ import { ContactComponent } from './contact/contact.component';
     AboutComponent,
     ManagementComponent,
     FundComponent,
-    AlumniComponent,
     CelebrationComponent,
     CounsellingComponent,
     BearersComponent,

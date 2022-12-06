@@ -7,10 +7,12 @@ import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { AlumniComponent } from './alumni/alumni.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AlumniComponent
   ],
   imports: [
     BrowserModule,

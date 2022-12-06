@@ -1,6 +1,5 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
-import { AlumniComponent } from './alumni/alumni.component';
 import { BearersComponent } from './bearers/bearers.component';
 import { CelebrationComponent } from './celebration/celebration.component';
 import { ContactComponent } from './contact/contact.component';
@@ -28,10 +27,6 @@ export const BasicRoutes: Routes = [{
     {
         path: 'fund',
         component: FundComponent
-    },
-    {
-        path: 'alumni',
-        component: AlumniComponent
     },
     {
         path: 'celebration',
