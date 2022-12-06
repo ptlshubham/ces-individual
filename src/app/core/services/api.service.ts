@@ -19,7 +19,7 @@ export class ApiService {
   //authenticate
 
   public static userLoginURL: string = ApiService.HOST_URL + '/authenticate/UserLogin';
-
+  public static getInstituteDetailByIdURL: string = ApiService.HOST_URL + '/admin/GetInstituteDetailById/';
   // admin
 
   public static saveInsituteDetailsURL: string = ApiService.HOST_URL + '/admin/SaveInsituteDetails';
@@ -60,7 +60,7 @@ export class ApiService {
 
 
   public static adminLoginURL: string = ApiService.HOST_URL + '/authenticate/adminLogin';
-  
+
 
   //Cashfree APIS
   public static createCashfreeOrderURL: string = ApiService.HOST_URL + '/cashfree/createCashfreeOrder';
