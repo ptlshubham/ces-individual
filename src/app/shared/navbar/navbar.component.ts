@@ -2,7 +2,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { WebNavbar } from 'src/app/core/model/web-navbar.model';
-import { SharedService } from 'src/app/core/services/shared.service';
 
 @Component({
   selector: 'app-navbar',
@@ -25,10 +24,8 @@ export class NavbarComponent {
     this.isSticky = window.pageYOffset >= 250;
   }
   constructor(
-    private sharedService: SharedService,
     private router:Router
   ) {
-    this.getWebNavDetails();
   }
   moreOpen() {
     this.readMore = true;
@@ -51,18 +48,7 @@ export class NavbarComponent {
     this.displayStyle1 = "none";
     this.displayStyle2 = "none";
   }
-  getWebNavDetails() {
-    this.webNavbarModel.name = 'CES';
 
-    this.sharedService.getWebNavbar(this.webNavbarModel).subscribe((data: any) => {
-      this.navDetails = data;
-      this.navContact=data[0].contact;
-      this.navEmail=data[0].email;
-      this.navLogo=data[0].logo;
-      debugger
-
-    })
-  }
   searchSchool(id:any){
     this.router.navigate(['/more/search',id]);
 
