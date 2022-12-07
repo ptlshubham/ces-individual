@@ -11,6 +11,7 @@ import { CelebrationComponent } from './celebration/celebration.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { BearersComponent } from './bearers/bearers.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -29,7 +30,8 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     CommonModule,
     RouterModule.forChild(BasicRoutes),
-    SharedModule
+    SharedModule,
+    NgxPaginationModule
   ]
 })
 export class BasicModule { }
