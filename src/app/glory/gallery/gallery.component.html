@@ -21,78 +21,17 @@
         <div class="rs-gallery pt-100 pb-100 md-pt-70 md-pb-70">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4 mb-30 col-md-6">
+                    <div class="col-lg-4 mb-30 col-md-6"
+                        *ngFor="let c of galleryImg | paginate: {id:'listing1', itemsPerPage: 15, currentPage: pa };let i=index">
                         <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/1.jpeg"><img
-                                    src="assets/images/gallery/1.jpeg" alt=""></a>
+                            <a class="image-popup" href="http://localhost:9000{{c.image}}"><img
+                                    src="http://localhost:9000{{c.image}}" alt=""></a>
                         </div>
                     </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/2.jpeg"><img
-                                    src="assets/images/gallery/2.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/3.jpeg"><img
-                                    src="assets/images/gallery/3.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/4.jpeg"><img
-                                    src="assets/images/gallery/4.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/5.jpeg"><img
-                                    src="assets/images/gallery/5.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/6.jpeg"><img
-                                    src="assets/images/gallery/6.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/7.jpeg"><img
-                                    src="assets/images/gallery/7.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/8.jpeg"><img
-                                    src="assets/images/gallery/8.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/9.jpeg"><img
-                                    src="assets/images/gallery/9.jpeg" alt="Image"></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 md-mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/10.jpeg"><img
-                                    src="assets/images/gallery/10.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 sm-mb-30 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/11.jpeg"><img
-                                    src="assets/images/gallery/11.jpeg" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-img">
-                            <a class="image-popup" href="assets/images/gallery/12.jpeg"><img
-                                    src="assets/images/gallery/12.jpeg" alt=""></a>
-                        </div>
-                    </div>
+                </div>
+                <div class="row">
+                    <pagination-controls id="listing1" (pageChange)="pa = $event">
+                    </pagination-controls>
                 </div>
             </div>
         </div>

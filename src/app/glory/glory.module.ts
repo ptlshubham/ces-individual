@@ -5,6 +5,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { RouterModule } from '@angular/router';
 import { GloryRoutes } from './glory.routing';
 import { SharedModule } from '../shared/shared.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     SharedModule,
     RouterModule.forChild(GloryRoutes),
+    NgxPaginationModule
     
   ]
 })
