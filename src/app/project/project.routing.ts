@@ -7,12 +7,8 @@ export const ProjectRoutes: Routes = [{
     path: '',
     children: [
     {
-        path: 'setu',
+        path: '',
         component: SetuComponent
-    },
-    {
-        path: 'sangam',
-        component: SangamComponent
     }
     ],
     

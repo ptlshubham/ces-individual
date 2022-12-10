@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { SharedModule } from '../shared/shared.module';
-import { MainComponent } from './main/main.component';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { StatisticsIncrementorComponent } from './statistics-incrementor/statistics-incrementor.component';
 import { AcademicCategoriesComponent } from './academic-categories/academic-categories.component';
@@ -17,6 +16,8 @@ import { ImageTextComponent } from './image-text/image-text.component';
 import { TextImageComponent } from './text-image/text-image.component';
 import { NewsMessageComponent } from './news-message/news-message.component';
 import { FacebookFeedComponent } from './facebook-feed/facebook-feed.component';
+import { RahotkarshFundComponent } from './rahotkarsh-fund/rahotkarsh-fund.component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -34,6 +35,7 @@ import { FacebookFeedComponent } from './facebook-feed/facebook-feed.component';
     TextImageComponent,
     NewsMessageComponent,
     FacebookFeedComponent,
+    RahotkarshFundComponent,
     
   ],
   imports: [
@@ -51,6 +53,7 @@ import { FacebookFeedComponent } from './facebook-feed/facebook-feed.component';
     SectionMessageComponent,
     SectionCourseComponent,
     CompetitionCertificateComponent,
+    RahotkarshFundComponent
   ],
 })
 export class LandingModule { }

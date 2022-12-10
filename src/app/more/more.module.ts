@@ -7,6 +7,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MoreRoutes } from './more.routing';
 import { SearchComponent } from './search/search.component';
 import { EvalutionComponent } from './evalution/evalution.component';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 
 
@@ -14,7 +16,9 @@ import { EvalutionComponent } from './evalution/evalution.component';
   declarations: [
     CampusComponent,
     SearchComponent,
-    EvalutionComponent
+    EvalutionComponent,
+    PrivacyPolicyComponent,
+    TermsConditionsComponent
   ],
   imports: [
     CommonModule,
