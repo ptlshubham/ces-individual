@@ -14,7 +14,7 @@ export class StaffService {
         return this.http.post(ApiService.saveStaffProfileImagesURL, data);
     }
     saveStaffDetails(data: any) {
-        debugger
+         
         return this.http.post(ApiService.saveStaffDetailsListURL, data);
     }
 
@@ -22,7 +22,7 @@ export class StaffService {
         return this.http.get(ApiService.getAllStaffDetailsURL + id);
     }
     removeStaffDetailsById(id: any) {
-        debugger
+         
         return this.http.get(ApiService.removeStaffDetailsByIdURL + id);
     }
 

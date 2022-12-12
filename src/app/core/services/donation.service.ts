@@ -19,7 +19,7 @@ export class DonationService {
         return this.http.get(ApiService.getAllDonnerListURL);
     }
     saveBulkDonnersDetails(data: any) {
-        debugger
+         
         return this.http.post(ApiService.saveBulkDonnersDetailsURL, data);
     }
     removeDonnerDetailsById(id: any) {
@@ -27,7 +27,7 @@ export class DonationService {
         return this.http.get(ApiService.removeDonnerDetailsByIdURL + id);
     }
     saveBeneficiaryDetails(data: any) {
-         debugger
+          
         return this.http.post(ApiService.saveBeneficiaryDetailsURL, data);
     }
     getAllBeneficiaryDetailsData() {
@@ -38,7 +38,7 @@ export class DonationService {
         return this.http.get(ApiService.removeBeneficiaryDetailsByIdURL + id);
     }
     saveBulkBeneficiaryDetails(data: any) {
-        debugger
+         
         return this.http.post(ApiService.saveBulkBeneficiaryDetailsURL, data);
     }
 }

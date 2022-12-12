@@ -63,11 +63,18 @@ export class HomeService {
         return this.http.post<any>(ApiService.uploadInfraImageURL, img);
     }
     saveInfrastructureDetails(data: any) {
-        debugger
+         
         return this.http.post(ApiService.saveInfrastructureDetailsURL, data);
     }
     getImfraDetails(id: any) {
         return this.http.get(ApiService.getInfraDetailsByIdURL + id);
+    }
+    saveAlumniDetail(data: any) {
+        return this.http.post(ApiService.SaveAlumniDetailsURL, data);
+    }
+    saveContactUsDetails(data: any) {
+         
+        return this.http.post(ApiService.saveContactUsDetailsURL, data);
     }
 
 }

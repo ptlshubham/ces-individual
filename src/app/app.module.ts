@@ -9,6 +9,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HttpClientModule } from '@angular/common/http';
 import { AlumniComponent } from './alumni/alumni.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,8 @@ import { NgxPaginationModule } from 'ngx-pagination';
     NgbModule,
     HttpClientModule,
     NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes, {
       useHash: true, scrollPositionRestoration: 'enabled'
     }),

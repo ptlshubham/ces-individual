@@ -12,6 +12,7 @@ import { CounsellingComponent } from './counselling/counselling.component';
 import { BearersComponent } from './bearers/bearers.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -31,7 +32,9 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CommonModule,
     RouterModule.forChild(BasicRoutes),
     SharedModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class BasicModule { }
