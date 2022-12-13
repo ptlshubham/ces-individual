@@ -10,6 +10,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AlumniComponent } from './alumni/alumni.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule.forRoot(AppRoutes, {
       useHash: true, scrollPositionRestoration: 'enabled'
     }),
-
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     SharedModule,
     CarouselModule,
 

@@ -221,12 +221,10 @@
                                             <div class="blog-desc">
                                                 <div class="title mb-40 md-mb-15">
                                                     <div class="row">
-                                                        <div class="col-sm-6 col-md-9 col-lg-9 col-xl-9">
+                                                        <div class="col">
                                                             <h3 class="text-part">Donner's List</h3>
                                                         </div>
-                                                        <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3">
-                                                           
-                                                        </div>
+
                                                     </div>
                                                 </div>
                                                 <div style="overflow-x:auto;">
@@ -281,8 +279,34 @@
                                                             <div
                                                                 class="rs-degree style1 modify  pt-40 pb-70 md-pt-70 md-pb-40">
                                                                 <div class="title mb-40 md-mb-15">
-                                                                    <h3 class="text-part">Beneficiary Students
-                                                                    </h3>
+                                                                    <div class="row">
+                                                                        <div class="col">
+                                                                            <h3 class="text-part">Beneficiary Students
+                                                                            </h3>
+                                                                        </div>
+                                                                        <div class="col text-end">
+                                                                            <label for="drop">Select Year</label><br>
+                                                                            <div ngbDropdown class="d-inline-block">
+                                                                                <button type="button"
+                                                                                    class="btn btn-outline-primary"
+                                                                                    id="dropdownBasic1"
+                                                                                    ngbDropdownToggle>
+                                                                                    {{selectedYear}}
+                                                                                </button>
+                                                                                <div ngbDropdownMenu
+                                                                                    aria-labelledby="dropdownBasic1">
+                                                                                    <button ngbDropdownItem
+                                                                                        disabled>Select Year</button>
+                                                                                    <div *ngFor="let y of yearData">
+
+                                                                                        <button ngbDropdownItem
+                                                                                            on-click="selectYear(y.year)">{{y.year}}</button>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                                 <div style="overflow-x:auto;">
                                                                     <table class="table">

@@ -13,6 +13,7 @@ import { BearersComponent } from './bearers/bearers.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -33,6 +34,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RouterModule.forChild(BasicRoutes),
     SharedModule,
     NgxPaginationModule,
+    NgbDropdownModule,
     FormsModule,
     ReactiveFormsModule
   ]

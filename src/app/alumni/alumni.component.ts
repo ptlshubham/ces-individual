@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { ApiService } from '../core/services/api.service';
 import { HomeService } from '../core/services/home.services';
 
@@ -15,7 +16,8 @@ export class AlumniComponent implements OnInit {
 
   constructor(
     private homeService: HomeService,
-    private apiService: ApiService
+    private apiService: ApiService,
+    private toastrMessage: ToastrService
   ) {
     this.getAllInstituteDetails();
   }
@@ -34,7 +36,7 @@ export class AlumniComponent implements OnInit {
 
     this.homeService.saveAlumniDetail(this.alumniModel).subscribe((res: any) => {
       if (res == 'success') {
-        this.apiService.showNotification('top', 'right', 'Alumni Registration Completed Successfully.', 'success');
+        this.toastrMessage.success('Alumni data added Successfully.', 'Success', { timeOut: 3000, });
       }
 
     })
