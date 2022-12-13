@@ -12,6 +12,8 @@ import { CounsellingComponent } from './counselling/counselling.component';
 import { BearersComponent } from './bearers/bearers.component';
 import { ContactComponent } from './contact/contact.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -31,7 +33,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
     CommonModule,
     RouterModule.forChild(BasicRoutes),
     SharedModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    NgbDropdownModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class BasicModule { }

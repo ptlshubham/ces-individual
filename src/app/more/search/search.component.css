@@ -17,3 +17,9 @@ a {
 .rs-degree.style1 .degree-wrap .content-part .desc {
     margin-bottom: 5px;
 }
+.ctitle{
+    font-size: 14px !important;
+}
+.cdesc{
+    font-size: 11px !important;
+}

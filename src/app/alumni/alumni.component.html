@@ -24,10 +24,10 @@
                     <div class="col-lg-12 md-mb-50">
                         <!-- Intro Info Tabs-->
                         <div class="intro-info-tabs">
-                            
+
                             <div class="tab-content tabs-content" id="myTabContent">
-                            <div class="tab-pane tab fade show active" id="prod-Photo" role="tabpanel"
-                                aria-labelledby="prod-Photo-tab">
+                                <div class="tab-pane tab fade show active" id="prod-Photo" role="tabpanel"
+                                    aria-labelledby="prod-Photo-tab">
                                     <div class="content white-bg pt-30">
                                         <!-- Cource Overview -->
                                         <div class="course-overview">
@@ -41,84 +41,57 @@
                                                             <!-- <h4>Join us on this coming Alumni Day on January 13, 2023, and let's make this event grand together! <br> Click the link below to register for FREE!</h4>
                                 
                                                             <a href="https://forms.gle/sgE3nD6MFsdWb8RJ6" target="_blank"> <span style="font-size: 20px;">Register Now</span> </a> -->
-                                                            
+
                                                             <div class="form-content-box">
                                                                 <div class="row">
                                                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <select name="users" ng-model="userSelect">
-                                                                                <option value="">--Select--</option>
-                                                                                <option value="3">Ambalal Balshala, Anand</option>
-                                                                                <option value="28">CES Performing Arts And Fine Arts Academy</option>
-                                                                                <option value="0">Charotar Education Society</option>
-                                                                                <option value="1">Charotar English Medium School, Anand</option>
-                                                                                <option value="4">D. N. High School (Std 6 to 8), Anand </option>
-                                                                                <option value="6">D. N. High School (Std 9 to 12), Anand</option>
-                                                                                <option value="29">IT Cell</option>
-                                                                                <option value="12">K. M. Patel Balshala and Shishuvihar, Mogri</option>
-                                                                                <option value="7">Kasturba Kanya Vidhyalaya (Std 9 to 12), Anand
+                                                                            <select required
+                                                                                class="form-control form-select"
+                                                                                [ngModelOptions]="{standalone: true}"
+                                                                                [(ngModel)]="alumniModel.instituteName">
+                                                                                <option disabled>Select Institute
                                                                                 </option>
-                                                                                <option value="5">Kasturba Kanya Vidyalaya (Std 6 to 8), Anand</option>
-                                                                                <option value="27">LRC, Anand</option>
-                                                                                <option value="13">Mahatma Gandhi Vidyalaya (Std 6 to 8), Mogri</option>
-                                                                                <option value="14">Mahatma Gandhi Vidyalaya (Std 9 to 12), Mogri
+                                                                                <option value="{{c.name}}"
+                                                                                    *ngFor="let c of instituteList">
+                                                                                    {{c.name}}
                                                                                 </option>
-                                                                                <option value="10">Sardar Vallabhbhai Patel High School (Std 6 to 8),
-                                                                                    Khetiwadi</option>
-                                                                                <option value="11">Sardar Vallabhbhai Patel High School (Std 9 to 12),
-                                                                                    Khetiwadi</option>
-                                                                                <option value="9">Sardar Vallabhbhai Patel Shishuvihar and Balshala,
-                                                                                    Khetiwadi</option>
-                                                                                <option value="2">Shishuvihar, Nutan Shishuvihar And Nursary, Anand
-                                                                                </option>
-                                                                                <option value="8">V. J. Patel Higher Secondary School, Anand</option>
-                                                                                <option value="30">M. B. Patel Applied Science College</option>
-                                                                                <option value="16">M. B. Patel Science College, Anand</option>
-                                                                                <option value="25">Motibhai Amin P. S. Adhyapan Mandir (D.EL.Ed.), Mogri
-                                                                                </option>
-                                                                                <option value="15">Shri Alpesh N. Patel Post Graduate Institute of
-                                                                                    Science and Research, Anand</option>
-                                                                                <option value="22">Shri Bhikhabhai Patel Arts College, Anand</option>
-                                                                                <option value="21">Shri Bhikhabhai Patel Institute Of P. G. Studies
-                                                                                    &amp; Research in Humanities, Anand</option>
-                                                                                <option value="20">Shri D. N. Institute of Business Administration,
-                                                                                    Anand</option>
-                                                                                <option value="17">Shri D. N. Institute of Computer Applications, Anand
-                                                                                </option>
-                                                                                <option value="18">Shri D. N. Institute of P. G. Studies in Commerce,
-                                                                                    Anand</option>
-                                                                                <option value="24">Shri I. J. Patel B.Ed. College, Mogri</option>
-                                                                                <option value="23">Shri I. J. Patel M.Ed. College, Mogri</option>
-                                                                                <option value="26">Shri V. J. Patel College of Physical Education, Mogri
-                                                                                </option>
-                                                                                <option value="19">Shri V. Z. Patel Commerce College, Anand</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
-                                
+
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-12 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <label>Enter Alumni Name *</label>
-                                                                            <input id="lname" name="lname" class="form-control-mod" type="text"
-                                                                                required="">
+                                                                            <label>Alumni Name *</label>
+                                                                            <input id="lname" name="lname"
+                                                                                class="form-control-mod" type="text"
+                                                                                [ngModelOptions]="{standalone: true}"
+                                                                                [(ngModel)]="alumniModel.alumniName"
+                                                                                placeholder="Enter Alumni Name">
                                                                         </div>
                                                                     </div>
-                                
+
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <label>Enter Course</label>
-                                                                            <input id="cname" name="cname" class="form-control-mod" type="text">
+                                                                            <label>Course Title</label>
+                                                                            <input id="cname" name="cname"
+                                                                                class="form-control-mod" type="text"
+                                                                                [ngModelOptions]="{standalone: true}"
+                                                                                [(ngModel)]="alumniModel.alumniCourse"
+                                                                                placeholder="Enter Course Name">
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
                                                                             <label>Select Year</label>
-                                                                            <select name="users" ng-model="userSelect">
-                                                                                <option value="">--Select--</option>
+                                                                            <select name="users"
+                                                                                [ngModelOptions]="{standalone: true}"
+                                                                                [(ngModel)]="alumniModel.alumniYear">
+                                                                                <option disabled>Select Year</option>
                                                                                 <option value="2022">2022</option>
                                                                                 <option value="2021">2021</option>
                                                                                 <option value="2020">2020</option>
@@ -226,46 +199,55 @@
                                                                                 <option value="1918">1918</option>
                                                                                 <option value="1917">1917</option>
                                                                                 <option value="1916">1916</option>
-                                
+
                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                
+
                                                                 <div class="row">
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <label>Enter Phone Number</label>
-                                                                            <input id="phone" name="phone" class="form-control-mod" type="text">
+                                                                            <label>Contact Number</label>
+                                                                            <input id="contact" name="contact"
+                                                                                class="form-control-mod" type="number"
+                                                                                [ngModelOptions]="{standalone: true}"
+                                                                                [(ngModel)]="alumniModel.contactNumber"
+                                                                                placeholder="Enter Contact Number">
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <label>Enter Email Address</label>
-                                                                            <input id="email" name="email" class="form-control-mod" type="text">
+                                                                            <label>Email Address</label>
+                                                                            <input id="email" name="email"
+                                                                                class="form-control-mod" type="text"
+                                                                                [ngModelOptions]="{standalone: true}"
+                                                                                [(ngModel)]="alumniModel.email"
+                                                                                placeholder="Enter Email Address">
                                                                         </div>
                                                                     </div>
-                                                                   
+
                                                                 </div>
                                                                 <div class="row mt-20">
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <input class="btn-send" type="submit" value="Submit Now">
+                                                                            <input class="btn-send" type="submit"
+                                                                                (click)="saveAlumniData()">
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                
+
                                                             </div>
                                                         </div><!-- .billing-fields -->
-                                
-                                
+
+
                                                     </form>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                               
+
                             </div>
                         </div>
                     </div>

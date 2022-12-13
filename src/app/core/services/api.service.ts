@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpClientModule, HttpHeaders, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { TemplateRef } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 declare var $: any;
+
 @Injectable({
   providedIn: 'root'
 })
@@ -41,6 +41,7 @@ export class ApiService {
   public static getAllDonnerListURL: string = ApiService.HOST_URL + '/admin/GetAllDonnerList';
   public static removeDonnerDetailsByIdURL: string = ApiService.HOST_URL + '/admin/RemoveDonnerDetailsById/';
   public static saveBeneficiaryDetailsURL: string = ApiService.HOST_URL + '/admin/SaveBeneficiaryDetails';
+  public static getBeneficiaryYearURL: string = ApiService.HOST_URL + '/admin/GetBeneficiaryYear';
   public static getAllBeneficiaryListURL: string = ApiService.HOST_URL + '/admin/GetAllBeneficiaryList';
   public static removeBeneficiaryDetailsByIdURL: string = ApiService.HOST_URL + '/admin/RemoveBeneficiaryDetailsById/';
   public static saveBulkBeneficiaryDetailsURL: string = ApiService.HOST_URL + '/admin/SaveBulkBeneficiaryDetails';
@@ -51,7 +52,9 @@ export class ApiService {
   public static uploadInfraImageURL: string = ApiService.HOST_URL + '/admin/UploadInfraImage';
   public static saveInfrastructureDetailsURL: string = ApiService.HOST_URL + '/admin/SaveInfrastructureDetails';
   public static getInfraDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetInfraDetailsById/';
-
+  public static SaveAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/SaveAlumniDetails';
+  public static GetAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/GetAlumniDetails';
+  public static saveContactUsDetailsURL: string = ApiService.HOST_URL + '/admin/SaveContactUsDetails';
 
 
 
@@ -68,12 +71,5 @@ export class ApiService {
 
 
 
-  show(textOrTpl: string | TemplateRef<any>, options: any = {}) {
 
-    this.toasts.push({ textOrTpl, ...options });
-  }
-
-  remove(toast: any) {
-    this.toasts = this.toasts.filter(t => t !== toast);
-  }
 }

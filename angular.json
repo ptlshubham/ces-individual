@@ -30,6 +30,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css",
               "src/assets/css/bootstrap.min.css",
               "src/assets/css/font-awesome.min.css",
@@ -45,12 +46,15 @@
               "src/assets/css/style.css",
               "src/assets/css/responsive.css",
               "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css",
-              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css"
+              "node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
               "src/assets/js/modernizr-2.8.3.min.js",
               "src/assets/js/jquery.min.js",
               "src/assets/js/bootstrap.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.js",
+              "node_modules/bootstrap-notify/bootstrap-notify.js",
               "src/assets/js/rsmenu-main.js",
               "src/assets/js/jquery.nav.js",
               "src/assets/js/wow.min.js",
@@ -146,6 +150,7 @@
               "src/assets/js/modernizr-2.8.3.min.js",
               "src/assets/js/jquery.min.js",
               "src/assets/js/bootstrap.min.js",
+              "node_modules/bootstrap-notify/bootstrap-notify.js",
               "src/assets/js/rsmenu-main.js",
               "src/assets/js/jquery.nav.js",
               "src/assets/js/wow.min.js",
