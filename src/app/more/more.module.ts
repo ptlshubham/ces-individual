@@ -9,6 +9,7 @@ import { SearchComponent } from './search/search.component';
 import { EvalutionComponent } from './evalution/evalution.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { NewsComponent } from './news/news.component';
 
 
 
@@ -18,7 +19,8 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
     SearchComponent,
     EvalutionComponent,
     PrivacyPolicyComponent,
-    TermsConditionsComponent
+    TermsConditionsComponent,
+    NewsComponent
   ],
   imports: [
     CommonModule,
