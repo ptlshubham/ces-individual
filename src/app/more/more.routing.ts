@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { CampusComponent } from './campus/campus.component';
+import { NewsComponent } from './news/news.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { SearchComponent } from './search/search.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
@@ -21,6 +22,10 @@ export const MoreRoutes: Routes = [{
     {
         path: 'terms',
         component: TermsConditionsComponent
+    },
+    {
+        path: 'news',
+        component: NewsComponent
     },
     ]
 }];
