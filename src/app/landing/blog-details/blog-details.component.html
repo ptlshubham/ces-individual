@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<body class="defult-home">
+    <div class="main-content">
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img src="./assets/images/slider/1.jpg" alt="Breadcrumbs Image">
+            </div>
+            <div class="breadcrumbs-text white-color">
+                <h1 class="page-title">Blogs</h1>
+                <ul>
+                    <li>
+                        <a class="active" routerLink="/home/blog">Blog</a>
+                    </li>
+                    <li>Blog Details</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Breadcrumbs End -->
+
+        <!-- Blog Section Start -->
+        <div class="rs-inner-blog orange-color pt-100 pb-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="blog-deatails">
+                    <div class="bs-img">
+                        <a href="#"><img src="http://localhost:9000{{bDetails.blogImage}}" alt=""></a>
+                    </div>
+                    <div class="blog-full">
+                        <ul class="single-post-meta">
+                            <li>
+                                <span class="p-date"> <i class="fa fa-calendar-check-o"></i>{{bDetails.blogDate|date}}
+                                </span>
+                            </li>
+                            <li>
+                                <span class="p-date"> <i class="fa fa-user-o"></i> {{bDetails.authorName}} </span>
+                            </li>
+                            <!-- <li class="post-comment"> <i class="fa fa-comments-o"></i> 0</li> -->
+                        </ul>
+                        <div class="blog-desc" [innerHtml]='bDetails.blogDetails'>
+                            <h3 class="blog-title mt-3"><a style="color: #30add3;">{{bDetails.blogTitle}}</a></h3>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="rs-footer" class="rs-footer">
+        <app-footer></app-footer>
+    </footer>
+</body>

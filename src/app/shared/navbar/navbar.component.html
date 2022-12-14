@@ -161,7 +161,7 @@
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a (click)="openPopup2()">Birthday</a>
+                            <a (click)="open(content)">Birthday</a>
                         </li>
                         |
                         <li class="menu-item lm">
@@ -707,44 +707,59 @@
                 <!--/.Content-->
             </div>
         </div>
-        <!--Modal: modalRelatedContent-->
-        <!--Modal: modalRelatedContent-->
-        <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle2}">
-            <div class="modal-dialog modal-left modal-bottom-right modal-notify modal-info" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                    <!--Header-->
-                    <div class="modal-header">
-                        <p class="heading">BIRTHDAY</p>
-
-                        <button type="button" class="close" (click)="closePopup()">
-                            <span aria-hidden="true" class="white-text">&times;</span>
-                        </button>
-                    </div>
-
-                    <!--Body-->
-                    <div class="modal-body">
-
-                        <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10">
-
-                                <p><strong>
-                                        DR. ZARNA PATEL (Assistant Professor At Shri Alpesh N. Patel Post Graduate
-                                        Institute Of Science And Research, Anand)</strong></p>
-
-                                <button type="button" class="btn btn-info btn-md" (click)="closePopup()">Close</button>
+        <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title">Birthday</h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+            </div>
+            <div class="modal-body">
+                <div class="rs-faq-part rs-about style1">
+                    <div class="container">
+                        <div class="main-part">
+                            <div class="faq-content">
+                                <div class="accordion" id="accordionExample">
+                                    <div class="row">
+                                        <div class="col-6" *ngFor="let s of staffDataTable;let i=index">
+                                            <div class="accordion-item card">
+                                                <div class="accordion-header card-header" id="headingOne">
+                                                    <button class="accordion-button card-link" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                                                        aria-expanded="true" aria-controls="collapseOne">{{s.name}}</button>
+                                                </div>
+                                                <div id="collapseOne" class="accordion-collapse collapse"
+                                                    data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body card-body">
+                                                        {{s.institute_id}}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="accordion-item card">
+                                                <div class="accordion-header card-header" id="headingTwo">
+                                                    <button class="card-link accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsetwo"
+                                                        aria-expanded="false" aria-controls="collapsetwo">Project
+                                                        EKLAVYA:</button>
+                                                </div>
+                                                <div id="collapsetwo" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                                    <div class="accordion-body card-body">Prepare student for Life
+                                                        skill, personality development and ICT for
+                                                        overall progress.
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-
-                            <div class="col-1"></div>
                         </div>
                     </div>
-
                 </div>
-                <!--/.Content-->
             </div>
-        </div>
-        <!--Modal: modalRelatedContent-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+            </div>
+        </ng-template>
     </header>
 
 </div>

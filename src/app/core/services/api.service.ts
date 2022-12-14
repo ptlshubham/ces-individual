@@ -55,6 +55,7 @@ export class ApiService {
   public static SaveAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/SaveAlumniDetails';
   public static GetAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/GetAlumniDetails';
   public static saveContactUsDetailsURL: string = ApiService.HOST_URL + '/admin/SaveContactUsDetails';
+  public static getNewsByIdDetailsURL: string = ApiService.HOST_URL + '/admin/GetNewsByIdDetails/';
 
 
 

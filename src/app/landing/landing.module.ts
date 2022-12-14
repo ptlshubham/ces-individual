@@ -18,6 +18,8 @@ import { NewsMessageComponent } from './news-message/news-message.component';
 import { FacebookFeedComponent } from './facebook-feed/facebook-feed.component';
 import { RahotkarshFundComponent } from './rahotkarsh-fund/rahotkarsh-fund.component';
 import { MainComponent } from './main/main.component';
+import { BlogDetailsComponent } from './blog-details/blog-details.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 
@@ -36,6 +38,8 @@ import { MainComponent } from './main/main.component';
     NewsMessageComponent,
     FacebookFeedComponent,
     RahotkarshFundComponent,
+    BlogDetailsComponent,
+    BlogComponent,
     
   ],
   imports: [

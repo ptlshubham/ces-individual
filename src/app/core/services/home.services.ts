@@ -76,5 +76,8 @@ export class HomeService {
          
         return this.http.post(ApiService.saveContactUsDetailsURL, data);
     }
+    getNewsDataById(institute_id: any) {
+        return this.http.get(ApiService.getNewsByIdDetailsURL + institute_id);
+    }
 
 }
