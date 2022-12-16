@@ -110,7 +110,7 @@
                         <ul class="topbar-right">
                             <li class="login-register" style="font-size:12px !important;">
                                 <i class="fa fa-clock-o"></i>
-                                <a>Last Updated:27-june-2022</a>
+                                <a>Last Updated: {{siteUpdate.updatedSite|date}}</a>
                             </li>
                             <li class="login-register" style="font-size:12px !important;">
                                 <i class="fa fa-users"></i>
@@ -157,7 +157,7 @@
                         </li>
                         |
                         <li class="menu-item lm">
-                            <a (click)="openPopup1()">News</a>
+                            <a routerLink="/more/news">News</a>
                         </li>
                         |
                         <li class="menu-item lm">
@@ -670,12 +670,9 @@
         </div>
         <!--Modal: modalCookie-->
 
-        <!--Modal: modalRelatedContent-->
-        <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle1}">
+        <!-- <div class="modal right" tabindex="-1" role="dialog" [ngStyle]="{'display':displayStyle1}">
             <div class="modal-dialog modal-side modal-bottom-right modal-notify modal-info" role="document">
-                <!--Content-->
                 <div class="modal-content">
-                    <!--Header-->
                     <div class="modal-header">
                         <p class="heading">TODAY'S NEWS / EVENTS</p>
 
@@ -684,7 +681,6 @@
                         </button>
                     </div>
 
-                    <!--Body-->
                     <div class="modal-body">
 
                         <div class="row">
@@ -704,70 +700,58 @@
                     </div>
 
                 </div>
-                <!--/.Content-->
             </div>
-        </div>
+        </div> -->
         <ng-template #content let-c="close" let-d="dismiss">
             <div class="modal-header">
-                <h4 class="modal-title" id="modal-basic-title">Birthday</h4>
+                <div class="icon-part" style="margin: 10px 20px 10px 20px !important;">
+                    <img src="assets/images/categories/icons/cake.png" alt="">
+                </div>
+                <h4 class="modal-title" id="modal-basic-title" style="text-align: center;">Wish List of the Day ! </h4>
                 <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
             </div>
             <div class="modal-body">
-                <div class="rs-faq-part rs-about style1">
-                    <div class="container">
-                        <div class="main-part">
-                            <div class="faq-content">
-                                <div class="accordion" id="accordionExample">
-                                    <div class="row">
-                                        <div class="col-6" *ngFor="let s of staffDataTable;let i=index">
-                                            <div class="accordion-item card">
-                                                <div class="accordion-header card-header" id="headingOne">
-                                                    <button class="accordion-button card-link" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                                                        aria-expanded="true" aria-controls="collapseOne">{{s.name}}</button>
-                                                </div>
-                                                <div id="collapseOne" class="accordion-collapse collapse"
-                                                    data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body card-body">
-                                                        {{s.institute_id}}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- <div class="accordion-item card">
-                                                <div class="accordion-header card-header" id="headingTwo">
-                                                    <button class="card-link accordion-button collapsed" type="button"
-                                                        data-bs-toggle="collapse" data-bs-target="#collapsetwo"
-                                                        aria-expanded="false" aria-controls="collapsetwo">Project
-                                                        EKLAVYA:</button>
-                                                </div>
-                                                <div id="collapsetwo" class="accordion-collapse collapse"
-                                                    aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                    <div class="accordion-body card-body">Prepare student for Life
-                                                        skill, personality development and ICT for
-                                                        overall progress.
-                                                    </div>
-                                                </div>
-                                            </div> -->
-                                        </div>
-                                    </div>
+                <div class="row" *ngFor="let s of staffDataTable;let i=index">
+                    <div class="col-1">
+                        <p style="text-align: center;"><strong>{{i+1}}</strong></p>
+                    </div>
+                    <div class="col-2">
+                        <img src="http://localhost:9000{{s.profile_image}}" class="img-thumbnail" alt="wedrfgthyuj" />
+                    </div>
+                    <div class="col-5">
+                        <p>
+                            <strong>
+                                {{s.name}} <br>
+                                {{s.instituteName}},<br>
+                                {{s.departmentName}},<br>
+                                {{s.designation}},<br>
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="col-4">
+                        <ul class="address-widget">
+                            <li class="mt-3">
+                                <div class="desc">
+                                    <i class="flaticon-call" style="color: black;"></i> <a
+                                        href="tel:{{s.contact}}">{{s.contact}}</a>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1"></div>
-                    <div class="col-10">
-
-                        <p><strong>
-                            DR. ZARNA PATEL (Assistant Professor At Shri Alpesh N. Patel Post Graduate Institute Of Science And Research, Anand)</strong></p>
+                            </li>
+                            <li>
+                                <div class="desc">
+                                    <i class="flaticon-email" style="color: black;"></i> <a href="mailto:{{s.email}}">
+                                        {{s.email}}</a> <br>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
 
-                    <div class="col-1"></div>
+
+                    <hr *ngIf="staffDataTable.length>1">
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+                <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">
+                    <i class="fa fa-times" aria-hidden="true"></i> Close</button>
             </div>
         </ng-template>
     </header>

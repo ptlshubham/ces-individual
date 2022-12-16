@@ -9,7 +9,10 @@ export class HomeService {
         private http: HttpClient
     ) { }
     getInstituteDetailsById(data: any) {
-        return this.http.get(ApiService.getInstituteDetailByIdURL + data);
+        return this.http.get(ApiService.getInstituteDetailByUrlURL + data);
+    }
+    getLastUpdateSiteByIdURL(id: any) {
+        return this.http.get(ApiService.getLastUpdateSiteByIdURL + id);
     }
     saveInstituteData(data: any) {
         return this.http.post(ApiService.saveInsituteDetailsURL, data);
@@ -63,7 +66,7 @@ export class HomeService {
         return this.http.post<any>(ApiService.uploadInfraImageURL, img);
     }
     saveInfrastructureDetails(data: any) {
-         
+
         return this.http.post(ApiService.saveInfrastructureDetailsURL, data);
     }
     getImfraDetails(id: any) {
@@ -73,11 +76,14 @@ export class HomeService {
         return this.http.post(ApiService.SaveAlumniDetailsURL, data);
     }
     saveContactUsDetails(data: any) {
-         
+
         return this.http.post(ApiService.saveContactUsDetailsURL, data);
     }
     getNewsDataById(institute_id: any) {
         return this.http.get(ApiService.getNewsByIdDetailsURL + institute_id);
     }
 
+    getAllNewsDataForInstitute(institute_id: any) {
+        return this.http.get(ApiService.getAllNewsDetailsURL + institute_id);
+    }
 }

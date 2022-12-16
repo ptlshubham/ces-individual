@@ -19,7 +19,11 @@ export class ApiService {
   //authenticate
 
   public static userLoginURL: string = ApiService.HOST_URL + '/authenticate/UserLogin';
-  public static getInstituteDetailByIdURL: string = ApiService.HOST_URL + '/admin/GetInstituteDetailById/';
+
+  // User
+  public static getInstituteDetailByUrlURL: string = ApiService.HOST_URL + '/admin/GetInstituteDetailByURL/';
+  public static getLastUpdateSiteByIdURL: string = ApiService.HOST_URL + '/admin/GetLastUpdateSiteById/';
+
   // admin
 
   public static saveInsituteDetailsURL: string = ApiService.HOST_URL + '/admin/SaveInsituteDetails';
@@ -56,7 +60,8 @@ export class ApiService {
   public static GetAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/GetAlumniDetails';
   public static saveContactUsDetailsURL: string = ApiService.HOST_URL + '/admin/SaveContactUsDetails';
   public static getNewsByIdDetailsURL: string = ApiService.HOST_URL + '/admin/GetNewsByIdDetails/';
-
+  public static getAllBirthdayDetailsURL: string = ApiService.HOST_URL + '/admin/GetAllBirthdayDetails';
+  public static getAllNewsDetailsURL: string = ApiService.HOST_URL + '/admin/GetAllNewsDetails/';
 
 
 

@@ -3,6 +3,7 @@ import { Component, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgbModal, NgbModalConfig } from '@ng-bootstrap/ng-bootstrap';
 import { WebNavbar } from 'src/app/core/model/web-navbar.model';
+import { HomeService } from 'src/app/core/services/home.services';
 import { StaffService } from 'src/app/core/services/staff.services';
 
 @Component({
@@ -17,6 +18,7 @@ export class NavbarComponent {
   readMore = false;
   public navDetails: WebNavbar[] = [];
   staffDataTable: any = [];
+  siteUpdate: any = {};
   public webNavbarModel: WebNavbar = new WebNavbar;
   navContact: any;
   navEmail: any;
@@ -30,12 +32,14 @@ export class NavbarComponent {
     private router: Router,
     config: NgbModalConfig,
     private modalService: NgbModal,
-    private staffService: StaffService
+    private staffService: StaffService,
+    private homeService: HomeService
 
   ) {
     config.backdrop = 'static';
     config.keyboard = false;
     this.getStaffDetails();
+    this.getLastUpdateSite();
   }
   moreOpen() {
     this.readMore = true;
@@ -44,20 +48,16 @@ export class NavbarComponent {
     this.modalService.open(content, { size: 'lg', scrollable: true },);
   }
   displayStyle = "none";
-  displayStyle1 = "none";
   displayStyle2 = "none";
   openPopup() {
     this.displayStyle = "block";
   }
-  openPopup1() {
-    this.displayStyle1 = "block";
-  }
+
   openPopup2() {
     this.displayStyle2 = "block";
   }
   closePopup() {
     this.displayStyle = "none";
-    this.displayStyle1 = "none";
     this.displayStyle2 = "none";
   }
 
@@ -66,9 +66,13 @@ export class NavbarComponent {
 
   }
   getStaffDetails() {
-    this.staffService.getAllStaffDetailsData(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+    this.staffService.getBirthdayListData().subscribe((res: any) => {
       this.staffDataTable = res;
-      debugger
+    })
+  }
+  getLastUpdateSite() {
+    this.homeService.getLastUpdateSiteByIdURL(localStorage.getItem('InstituteId')).subscribe((res: any) => {
+      this.siteUpdate = res[0];
     })
   }
 }

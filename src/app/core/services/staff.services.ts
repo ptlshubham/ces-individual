@@ -14,7 +14,7 @@ export class StaffService {
         return this.http.post(ApiService.saveStaffProfileImagesURL, data);
     }
     saveStaffDetails(data: any) {
-         
+
         return this.http.post(ApiService.saveStaffDetailsListURL, data);
     }
 
@@ -22,8 +22,11 @@ export class StaffService {
         return this.http.get(ApiService.getAllStaffDetailsURL + id);
     }
     removeStaffDetailsById(id: any) {
-         
+
         return this.http.get(ApiService.removeStaffDetailsByIdURL + id);
+    }
+    getBirthdayListData() {
+        return this.http.get(ApiService.getAllBirthdayDetailsURL);
     }
 
 

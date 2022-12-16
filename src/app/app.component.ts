@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { HomeService } from './core/services/home.services';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,6 +25,7 @@ export class AppComponent implements OnInit {
         window.scrollTo(0, 0);
       }
     });
+   
   }
   getInstituteDetails() {
     this.homeService.getInstituteDetailsById(this.staticURL).subscribe((res: any) => {
