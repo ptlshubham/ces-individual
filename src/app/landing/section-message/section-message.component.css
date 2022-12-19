@@ -17,9 +17,9 @@ margin-left: auto;
 }
 .servicesHome-box {
 text-align: center;
-padding: 44px 45px;
+
 }
-servicesHome-box h2, .servicesHome-box p {
+.servicesHome-box h2, .servicesHome-box p {
 color: #fff;
 }
 h2, .h2 {
