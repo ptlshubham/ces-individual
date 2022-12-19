@@ -7,6 +7,7 @@ declare var $: any;
 })
 export class ApiService {
   public static HOST_URL: string = "http://localhost:9000";
+  // public static HOST_URL: string = "http://31.220.111.153:5555";
   toasts: any[] = [];
   constructor(
     private http: HttpClient,
