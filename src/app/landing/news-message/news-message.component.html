@@ -1,5 +1,5 @@
 <!-- About Section Start -->
-<div id="rs-about" class="rs-about style1 pb-100 md-pb-70">
+<div id="rs-about" class="rs-about style1 pb-100 md-pb-70" *ngIf="newsData.length>0" >
     <div class="container">
         <div class="row">
             <div class="title text-center pb-60">
@@ -7,9 +7,6 @@
             </div>
             <div class="col-lg-12 order-last">
                 <div class="row">
-                    <div *ngIf="newsData.length==0" style="text-align: center;">
-                        No Messages Avilable.
-                    </div>
                     <div class="col-lg-4">
                         <div class="notice-bord style1">
                             <ul>

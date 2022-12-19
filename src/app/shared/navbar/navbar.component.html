@@ -711,6 +711,13 @@
                 <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
             </div>
             <div class="modal-body">
+                <div classs="row">
+                    <p style="text-align: center; color: #ffcc00;" *ngIf="staffDataTable.length==0"><strong>
+                            There are no wishes to be made today!
+                        </strong></p>
+                </div>
+
+
                 <div class="row" *ngFor="let s of staffDataTable;let i=index">
                     <div class="col-1">
                         <p style="text-align: center;"><strong>{{i+1}}</strong></p>
