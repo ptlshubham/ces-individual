@@ -36,3 +36,7 @@ iframe {
 .rs-about.style1 .about-part{
     padding: 0;
 }
+.limitTextHeight {
+    height: 165px !important;
+    overflow: hidden !important;
+}

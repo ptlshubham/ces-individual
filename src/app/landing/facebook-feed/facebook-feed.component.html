@@ -37,10 +37,11 @@
                                                 </li> -->
                                             </ul>
                                         </div>
-                                        <div class="blog-desc mt-3" [innerHtml]='b.blogDetails'>
+                                        <div class="blog-desc mt-3 limitTextHeight" [innerHtml]='b.blogDetails'>
                                         </div>
-                                        <div class="blog-button">
-                                            <a class="blog-btn" (click)="continueBlog(b.id)">Continue Reading</a>
+                                        <div class="blog-button" style="text-align: center !important">
+                                            <a class="blog-btn" (click)="continueBlog(b.id)"
+                                                style="text-align: center !important;">Continue Reading</a>
                                         </div>
                                     </div>
                                 </div>
