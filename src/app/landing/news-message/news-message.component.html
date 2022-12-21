@@ -1,5 +1,5 @@
 <!-- About Section Start -->
-<div id="rs-about" class="rs-about style1 pb-100 md-pb-70" *ngIf="newsData.length>0" >
+<div id="rs-about" class="rs-about style1 pb-100 md-pb-70" *ngIf="newsData.length>0">
     <div class="container">
         <div class="row">
             <div class="title text-center pb-60">
@@ -13,7 +13,7 @@
                                 <li class="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
                                     *ngFor="let n of newsData ">
                                     <div class="date"><span>{{n.date |date}}</span></div>
-                                    <div class="desc">{{n.message}}
+                                    <div class="desc" [innerHTML]="n.message">
                                         <br> <a href="http://localhost:9000{{n.files}}" target="_blank">
                                             Download</a>
                                     </div>
@@ -27,7 +27,7 @@
                                 <li class="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
                                     *ngFor="let n of newsData1 ">
                                     <div class="date"><span>{{n.date |date}}</span></div>
-                                    <div class="desc">{{n.message}}
+                                    <div class="desc" [innerHTML]="n.message">
                                         <br> <a href="http://localhost:9000{{n.files}}" target="_blank">
                                             Download</a>
                                     </div>
@@ -41,7 +41,7 @@
                                 <li class="wow fadeInUp" data-wow-delay="300ms" data-wow-duration="2000ms"
                                     *ngFor="let n of newsData2 ">
                                     <div class="date"><span>{{n.date |date}}</span></div>
-                                    <div class="desc">{{n.message}}
+                                    <div class="desc" [innerHTML]="n.message">
                                         <br> <a href="http://localhost:9000{{n.files}}" target="_blank">
                                             Download</a>
                                     </div>
@@ -55,9 +55,10 @@
                     <div class="col-2">
                         <!-- <button type="submit"  routerLink="/more/news" style="align-items: center;">More News</button> -->
                         <a routerLink="/more/news" routerLinkActive="active"
-                        class="btn btn-sm btn-outline-white mb-0">More News <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            class="btn btn-sm btn-outline-white mb-0">More News <i class="fa fa-arrow-right"
+                                aria-hidden="true"></i></a>
                     </div>
-                    
+
                     <div class="col-5"></div>
                 </div>
             </div>
