@@ -1,30 +1,51 @@
 <app-navbar></app-navbar>
 <!-- About Section Start -->
-<div id="rs-about" class="rs-about style1 pb-100 md-pb-70">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="notice-bord style1">
-                    <h4 class="title">Latest News</h4>
-                    <div *ngIf="newsData.length==0" style="text-align: center;">
-                        No Messages Available.
-                    </div>
-                    <ul>
-                        <li class="wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1000ms"
-                            *ngFor="let n of newsData ">
-                            <div class="date"><span>{{n.date |date}}</span></div>
-                            <div class="desc">
-                                <div [innerHTML]="n.message"></div>
-                                <a href="http://localhost:9000{{n.files}}" target="_blank">
-                                    Download</a>
+
+<body class="defult-home">
+    <!-- Main content Start -->
+    <div class="main-content">
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img src="./assets/images/slider/1.jpg" alt="Breadcrumbs Image">
+            </div>
+            <div class="breadcrumbs-text white-color">
+                <h1 class="page-title">Latest News</h1>
+                <ul>
+                    <li>
+                        <a class="active" routerLink="/home/main" routerLinkActive="active">Home</a>
+                    </li>
+                    <li>News</li>
+                </ul>
+            </div>
+        </div>
+        <div id="rs-about" class="rs-about style1 pb-100 md-pb-70">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="notice-bord style1">
+                            <h4 class="title">Latest News</h4>
+                            <div *ngIf="newsData.length==0" style="text-align: center;">
+                                No Messages Available.
                             </div>
-                        </li>
-                    </ul>
+                            <ul>
+                                <li class="wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1000ms"
+                                    *ngFor="let n of newsData ">
+                                    <div class="date"><span>{{n.date |date}}</span></div>
+                                    <div class="desc">
+                                        <div [innerHTML]="n.message"></div>
+                                        <a href="http://localhost:9000{{n.files}}" target="_blank">
+                                            Download</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-
         </div>
     </div>
-</div>
-<!-- About Section End -->
-<app-footer></app-footer>
+    <footer id="rs-footer" class="rs-footer">
+        <app-footer></app-footer>
+    </footer>
+</body>
