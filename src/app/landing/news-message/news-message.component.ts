@@ -21,7 +21,7 @@ export class NewsMessageComponent implements OnInit {
     this.getNewsDetails();
   }
   getNewsDetails() {
-    this.homeService.getNewsDataById(localStorage.getItem('InstituteId')).subscribe((res: any=[]) => {
+    this.homeService.getNewsOnlyForCESURL(localStorage.getItem('InstituteId')).subscribe((res: any=[]) => {
       this.newsData = res.slice(0,3);
       this.newsData1 = res.slice(3,6);
       this.newsData2 = res.slice(6,9);

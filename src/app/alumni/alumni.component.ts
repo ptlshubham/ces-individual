@@ -16,7 +16,6 @@ export class AlumniComponent implements OnInit {
 
   constructor(
     private homeService: HomeService,
-    private apiService: ApiService,
     private toastrMessage: ToastrService
   ) {
     this.getAllInstituteDetails();

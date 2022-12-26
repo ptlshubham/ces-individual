@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<body class="defult-home">
+    <div class="main-content">
+        <!-- Breadcrumbs Start -->
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img src="./assets/images/slider/1.jpg" alt="Breadcrumbs Image">
+            </div>
+            <div class="breadcrumbs-text white-color">
+                <h1 class="page-title">Magazine</h1>
+                <ul>
+                    <li>
+                        <a class="active" routerLink="/home/main" routerLinkActive="active">Home</a>
+                    </li>
+                    <li>Magazine List</li>
+                </ul>
+            </div>
+        </div>
+        <section class="intro-section gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+            <div class="container">
+                <div class="row clearfix">
+                    <!-- Content Column -->
+                    <div class="col-lg-12 md-mb-50">
+                        <!-- Intro Info Tabs-->
+                        <div class="intro-info-tabs">
+                            <div class="content white-bg pt-30">
+                                <!-- Cource Overview -->
+                                <div class="course-overview">
+                                    <div class="inner-box ">
+                                        <div class="checkout-title mb-30">
+                                            <h3 style="text-align: center;">Balmitra Magazines</h3>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 mb-30 col-md-3"
+                                                *ngFor="let c of magazine | paginate: {id:'listing1', itemsPerPage: 12, currentPage: pa };let i=index">
+                                                <div class="gallery-img">
+                                                    <a href="http://localhost:9000{{c.files}}" target="_blank">
+                                                        <img src="assets/images/magazine.jpg" alt="">
+                                                        <div class="mt-2" style="text-align: center !important;">
+                                                            <span
+                                                                >{{c.title}}</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <pagination-controls id="listing1" (pageChange)="pa = $event">
+                                            </pagination-controls>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="rs-footer" class="rs-footer">
+        <app-footer></app-footer>
+    </footer>
+</body>

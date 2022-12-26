@@ -13,8 +13,9 @@
                         <li class="wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1000ms"
                             *ngFor="let n of newsData ">
                             <div class="date"><span>{{n.date |date}}</span></div>
-                            <div class="desc" [innerHTML]="n.message">
-                                <br> <a href="http://localhost:9000{{n.files}}" target="_blank">
+                            <div class="desc">
+                                <div [innerHTML]="n.message"></div>
+                                <a href="http://localhost:9000{{n.files}}" target="_blank">
                                     Download</a>
                             </div>
                         </li>

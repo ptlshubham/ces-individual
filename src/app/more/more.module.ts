@@ -9,6 +9,8 @@ import { SearchComponent } from './search/search.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { NewsComponent } from './news/news.component';
+import { MagazineComponent } from './magazine/magazine.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -18,13 +20,15 @@ import { NewsComponent } from './news/news.component';
     SearchComponent,
     PrivacyPolicyComponent,
     TermsConditionsComponent,
-    NewsComponent
+    NewsComponent,
+    MagazineComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild(MoreRoutes),
     NgbModule,
+    NgxPaginationModule
   ]
 })
 export class MoreModule { }

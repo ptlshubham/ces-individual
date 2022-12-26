@@ -82,8 +82,16 @@ export class HomeService {
     getNewsDataById(institute_id: any) {
         return this.http.get(ApiService.getNewsByIdDetailsURL + institute_id);
     }
-
+    getMagazineList() {
+        return this.http.get(ApiService.getMagazineListURL);
+    }
     getAllNewsDataForInstitute(institute_id: any) {
         return this.http.get(ApiService.getAllNewsDetailsURL + institute_id);
+    }
+    getNewsOnlyForCESURL(institute_id: any) {
+        return this.http.get(ApiService.getNewsOnlyForCESURL + institute_id);
+    }
+    saveCounselingDetail(data: any) {
+        return this.http.post(ApiService.saveCounselingDetailsURL, data);
     }
 }
