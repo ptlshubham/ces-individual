@@ -92,7 +92,10 @@
                                 <div class="rs-gallery pt-20 pb-100 md-pt-20 md-pb-70">
                                     <div class="container">
                                         <h3>Centenary Celebration With Celebrity</h3>
-                                        <div class="row">
+                                        <h4 style="color: red;text-align: center;" *ngIf="celebration.length==0">
+                                            Data
+                                            Not Found !</h4>
+                                        <div class="row" *ngIf="celebration.length>0">
                                             <div class="col-lg-3 mb-30 col-md-6"
                                                 *ngFor="let c of celebration | paginate: {id:'listing1', itemsPerPage: 16, currentPage: pa };let i=index">
                                                 <div class="gallery-img">
@@ -100,8 +103,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <pagination-controls id="listing1" (pageChange)="pa = $event">
-                                        </pagination-controls>
+                                        <div class="row mt-3" *ngIf="celebration.length>0">
+                                            <div class="row">
+                                                <div class="col text-end">
+                                                    <pagination-controls id="listing1" (pageChange)="pa = $event">
+                                                    </pagination-controls>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +160,10 @@
                                 <div class="rs-gallery pt-50 pb-100 md-pt-70 md-pb-70">
                                     <div class="container">
                                         <h3>Centenary Celebration With Celebrity</h3>
-                                        <div class="row">
+                                        <h4 style="color: red;text-align: center;" *ngIf="celebration.length==0">
+                                            Data
+                                            Not Found !</h4>
+                                        <div class="row" *ngIf="celebration.length>0">
                                             <div class="col-lg-3 mb-30 col-md-6"
                                                 *ngFor="let c of celebration | paginate: {id:'listing', itemsPerPage: 16, currentPage: p };let i=index">
                                                 <div class="gallery-img">
@@ -159,8 +171,14 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <pagination-controls id="listing" (pageChange)="p = $event">
-                                        </pagination-controls>
+                                        <div class="row mt-3" *ngIf="celebration.length>0">
+                                            <div class="row">
+                                                <div class="col text-end">
+                                                    <pagination-controls id="listing" (pageChange)="p = $event">
+                                                    </pagination-controls>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

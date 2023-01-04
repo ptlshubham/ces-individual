@@ -218,7 +218,10 @@
                                 <div class="content">
                                     <div id="accordion" class="accordion-box">
                                         <div class="blog-full">
-                                            <div class="blog-desc">
+                                            <h4 style="color: red;text-align: center;" *ngIf="donnerData.length==0">
+                                                Data
+                                                Not Found !</h4>
+                                            <div class="blog-desc" *ngIf="donnerData.length>0">
                                                 <div class="title mb-40 md-mb-15">
                                                     <div class="row">
                                                         <div class="col">
@@ -250,8 +253,15 @@
                                                         </tbody>
 
                                                     </table>
-                                                    <pagination-controls id="listing" (pageChange)="p = $event">
-                                                    </pagination-controls>
+                                                    <div class="row mt-3" *ngIf="donnerData.length>0">
+                                                        <div class="row">
+                                                            <div class="col text-end">
+                                                                <pagination-controls id="listing"
+                                                                    (pageChange)="p = $event">
+                                                                </pagination-controls>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -262,13 +272,17 @@
                                 aria-labelledby="prod-student-tab">
                                 <div class="content">
                                     <div class="intro-info-tabs">
-                                      
+
                                         <div class="tab-content tabs-content" id="myTabContent">
                                             <div class="tab-pane tab fade show active" id="prod-all" role="tabpanel"
                                                 aria-labelledby="prod-all-tab">
                                                 <div class="content white-bg">
                                                     <div class="course-overview">
-                                                        <div class="inner-box ">
+                                                        <h4 style="color: red;text-align: center;"
+                                                            *ngIf="beneficiaryData.length==0">
+                                                            Data
+                                                            Not Found !</h4>
+                                                        <div class="inner-box " *ngIf="beneficiaryData.length>0">
                                                             <div
                                                                 class="rs-degree style1 modify  pt-40 pb-70 md-pt-70 md-pb-40">
                                                                 <div class="title mb-40 md-mb-15">
@@ -325,9 +339,16 @@
                                                                             </tr>
                                                                         </tbody>
                                                                     </table>
-                                                                    <pagination-controls id="listing1"
-                                                                        (pageChange)="pa = $event">
-                                                                    </pagination-controls>
+                                                                    <div class="row mt-3"
+                                                                        *ngIf="beneficiaryData.length>0">
+                                                                        <div class="row">
+                                                                            <div class="col text-end">
+                                                                                <pagination-controls id="listing1"
+                                                                                    (pageChange)="pa = $event">
+                                                                                </pagination-controls>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
