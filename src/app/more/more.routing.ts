@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { CampusComponent } from './campus/campus.component';
+import { GatePassComponent } from './gate-pass/gate-pass.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { NewsComponent } from './news/news.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
@@ -31,6 +32,11 @@ export const MoreRoutes: Routes = [{
         {
             path: 'magazine',
             component: MagazineComponent
+        },
+
+        {
+            path: 'gate-pass',
+            component: GatePassComponent
         }
     ]
 }];

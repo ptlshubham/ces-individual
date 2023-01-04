@@ -11,7 +11,9 @@ import { TermsConditionsComponent } from './terms-conditions/terms-conditions.co
 import { NewsComponent } from './news/news.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { NgxPaginationModule } from 'ngx-pagination';
-
+import { GatePassComponent } from './gate-pass/gate-pass.component';
+import { FormsModule } from '@angular/forms';
+import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 
 
 @NgModule({
@@ -21,14 +23,18 @@ import { NgxPaginationModule } from 'ngx-pagination';
     PrivacyPolicyComponent,
     TermsConditionsComponent,
     NewsComponent,
-    MagazineComponent
+    MagazineComponent,
+    GatePassComponent
   ],
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild(MoreRoutes),
     NgbModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule,
+    DlDateTimeDateModule,  
+    DlDateTimePickerModule,
   ]
 })
 export class MoreModule { }

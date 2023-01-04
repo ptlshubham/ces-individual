@@ -47,20 +47,6 @@ export class NavbarComponent {
   open(content: any) {
     this.modalService.open(content, { size: 'lg', scrollable: true },);
   }
-  displayStyle = "none";
-  displayStyle2 = "none";
-  openPopup() {
-    this.displayStyle = "block";
-  }
-
-  openPopup2() {
-    this.displayStyle2 = "block";
-  }
-  closePopup() {
-    this.displayStyle = "none";
-    this.displayStyle2 = "none";
-  }
-
   searchSchool(id: any) {
     this.router.navigate(['/more/search', id]);
 

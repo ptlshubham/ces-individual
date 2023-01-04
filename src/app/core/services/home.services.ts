@@ -75,6 +75,9 @@ export class HomeService {
     saveAlumniDetail(data: any) {
         return this.http.post(ApiService.SaveAlumniDetailsURL, data);
     }
+    saveGatePassDetail(data: any) {
+        return this.http.post(ApiService.saveGatePassUserListURL, data);
+    }
     saveContactUsDetails(data: any) {
 
         return this.http.post(ApiService.saveContactUsDetailsURL, data);

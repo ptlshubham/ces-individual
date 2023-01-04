@@ -1,0 +1,419 @@
+<app-navbar></app-navbar>
+
+<body class="defult-home">
+    <div class="main-content">
+        <div class="rs-breadcrumbs breadcrumbs-overlay">
+            <div class="breadcrumbs-img">
+                <img src="./assets/images/slider/1.jpg" alt="Breadcrumbs Image">
+            </div>
+            <div class="breadcrumbs-text white-color">
+                <h1 class="page-title">Book Appointement</h1>
+                <ul>
+                    <li>
+                        <a class="active" routerLink="/home/main" routerLinkActive="active">Home</a>
+                    </li>
+                    <li>Book Appointement</li>
+                </ul>
+            </div>
+        </div>
+        <div class="rs-inner-blog orange-color pt-100 md-pt-70 md-pb-70">
+            <div class="container">
+                <div class="blog-deatails">
+                    <div class="intro-info-tabs intro-section gray-bg " style="margin-top: 10px;">
+                        <ul class="nav nav-tabs intro-tabs tabs-box" id="myTab" role="tablist">
+                            <li class="nav-item tab-btns" role="presentation">
+                                <a class="nav-link tab-btn active" id="visitor-tab" data-bs-toggle="tab" href="#"
+                                    data-bs-target="#visitor" role="tab" aria-controls="visitor"
+                                    aria-selected="true">For Visitor</a>
+                            </li>
+                            <li class="nav-item tab-btns" role="presentation">
+                                <a class="nav-link tab-btn" id="office-tab" data-bs-toggle="tab" href="#"
+                                    data-bs-target="#office" role="tab" aria-controls="office" aria-selected="false">For
+                                    Staff</a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content tabs-content" id="myTabContent">
+
+                            <div class="tab-pane tab fade show active" id="visitor" role="tabpanel"
+                                aria-labelledby="visitor-tab">
+                                <section class="intro-section rs-checkout  gray-bg mt-3 pb-10 md-pt-10 md-pb-10">
+                                    <div class="container">
+                                        <div class="row clearfix">
+                                            <div class="col-lg-12 md-mb-50">
+                                                <div class="intro-info-tabs">
+                                                    <div class="tab-content tabs-content" id="myTabContent">
+                                                        <div class="tab-pane tab fade show active" id="prod-Photo"
+                                                            role="tabpanel" aria-labelledby="prod-Photo-tab">
+                                                            <div class="content white-bg pt-30">
+                                                                <div class="course-overview">
+                                                                    <div class="inner-box ">
+                                                                        <div class="full-grid">
+                                                                            <form>
+                                                                                <div class="billing-fields">
+                                                                                    <div class="checkout-title">
+                                                                                        <h3>Visitor Details</h3>
+                                                                                    </div>
+                                                                                    <div class="form-content-box">
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Select
+                                                                                                        Institute</label>
+                                                                                                    <select required
+                                                                                                        class="form-control form-select"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.institute">
+                                                                                                        <option
+                                                                                                            disabled>
+                                                                                                            Select
+                                                                                                            Institute
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="{{c.name}}"
+                                                                                                            *ngFor="let c of instituteList">
+                                                                                                            {{c.name}}
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Whom to
+                                                                                                        Meet</label>
+                                                                                                    <select name="users"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.meetingWith">
+                                                                                                        <option
+                                                                                                            disabled>
+                                                                                                            Select Whom
+                                                                                                            to
+                                                                                                            Meet
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="P.A to Secretary">
+                                                                                                            P.A to
+                                                                                                            Secretary
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Campus Direactive">
+                                                                                                            Campus
+                                                                                                            Direactive
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Account Department">
+                                                                                                            Account
+                                                                                                            Department
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Estate / Maintance">
+                                                                                                            Estate /
+                                                                                                            Maintance
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visitor
+                                                                                                        Name</label>
+                                                                                                    <input id="name"
+                                                                                                        name="name"
+                                                                                                        class="form-control-mod"
+                                                                                                        type="text"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.name"
+                                                                                                        placeholder="Enter Visitor Name">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visit For
+                                                                                                        Purpose</label>
+                                                                                                    <textarea
+                                                                                                        class="form-control"
+                                                                                                        id="purpose"
+                                                                                                        name="purpose"
+                                                                                                        rows="5"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.purpose"
+                                                                                                        placeholder="Enter Visit For Purpose"></textarea>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visitor
+                                                                                                        Contact
+                                                                                                        Number</label>
+                                                                                                    <input id="contact"
+                                                                                                        name="contact"
+                                                                                                        class="form-control-mod"
+                                                                                                        type="number"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.contact"
+                                                                                                        placeholder="Enter Visitor Contact Number">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12 mt-3">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Select
+                                                                                                        Appointement
+                                                                                                        Date
+                                                                                                        Time</label>
+                                                                                                </div>
+                                                                                                <dl-date-time-picker
+                                                                                                    startView="day"
+                                                                                                    maxView="year"
+                                                                                                    minView="minute"
+                                                                                                    [(ngModel)]="selectedDate"
+                                                                                                    [ngModelOptions]="{standalone: true}"
+                                                                                                    (change)="onCustomDateChange($event)">
+                                                                                                </dl-date-time-picker>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                        <div class="row mt-20">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <div class="row">
+                                                                                                        <div
+                                                                                                            class="col-textend">
+                                                                                                            <input
+                                                                                                                class="btn-send"
+                                                                                                                type="submit"
+                                                                                                                (click)="saveGatePassData('Visitor')">
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div><!-- .billing-fields -->
+
+
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="tab-pane fade" id="office" role="tabpanel" aria-labelledby="office-tab">
+                                <section class="intro-section rs-checkout  gray-bg mt-3 pb-10 md-pt-10 md-pb-10">
+                                    <div class="container">
+                                        <div class="row clearfix">
+                                            <div class="col-lg-12 md-mb-50">
+                                                <div class="intro-info-tabs">
+                                                    <div class="tab-content tabs-content" id="myTabContent">
+                                                        <div class="tab-pane tab fade show active" id="prod-Photo"
+                                                            role="tabpanel" aria-labelledby="prod-Photo-tab">
+                                                            <div class="content white-bg pt-30">
+                                                                <div class="course-overview">
+                                                                    <div class="inner-box ">
+                                                                        <div class="full-grid">
+                                                                            <form>
+                                                                                <div class="billing-fields">
+                                                                                    <div class="checkout-title">
+                                                                                        <h3>Office Employee Details</h3>
+                                                                                    </div>
+                                                                                    <div class="form-content-box">
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Select
+                                                                                                        Institute</label>
+                                                                                                    <select required
+                                                                                                        class="form-control form-select"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.institute">
+                                                                                                        <option
+                                                                                                            disabled>
+                                                                                                            Select
+                                                                                                            Institute
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="{{c.name}}"
+                                                                                                            *ngFor="let c of instituteList">
+                                                                                                            {{c.name}}
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Whom to
+                                                                                                        Meet</label>
+                                                                                                    <select name="users"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.meetingWith">
+                                                                                                        <option
+                                                                                                            disabled>
+                                                                                                            Select Whom
+                                                                                                            to
+                                                                                                            Meet
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Secretary">
+                                                                                                            Secretary
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="P.A to Secretary">
+                                                                                                            P.A to
+                                                                                                            Secretary
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Campus Direactive">
+                                                                                                            Campus
+                                                                                                            Direactive
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Account Department">
+                                                                                                            Account
+                                                                                                            Department
+                                                                                                        </option>
+                                                                                                        <option
+                                                                                                            value="Estate / Maintance">
+                                                                                                            Estate /
+                                                                                                            Maintance
+                                                                                                        </option>
+                                                                                                    </select>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-6 col-xs-6">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visitor
+                                                                                                        Name</label>
+                                                                                                    <input id="name"
+                                                                                                        name="name"
+                                                                                                        class="form-control-mod"
+                                                                                                        type="text"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.name"
+                                                                                                        placeholder="Enter Visitor Name">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visit For
+                                                                                                        Purpose</label>
+                                                                                                    <textarea
+                                                                                                        class="form-control"
+                                                                                                        id="purpose"
+                                                                                                        name="purpose"
+                                                                                                        rows="5"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.purpose"
+                                                                                                        placeholder="Enter Visit For Purpose"></textarea>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visitor
+                                                                                                        Contact
+                                                                                                        Number</label>
+                                                                                                    <input id="contact"
+                                                                                                        name="contact"
+                                                                                                        class="form-control-mod"
+                                                                                                        type="number"
+                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        [(ngModel)]="gatePassModel.contact"
+                                                                                                        placeholder="Enter Visitor Contact Number">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="row">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12 mt-3">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Select
+                                                                                                        Appointement
+                                                                                                        Date
+                                                                                                        Time</label>
+                                                                                                </div>
+                                                                                                <dl-date-time-picker
+                                                                                                    startView="day"
+                                                                                                    maxView="year"
+                                                                                                    minView="minute"
+                                                                                                    [(ngModel)]="selectedDate"
+                                                                                                    [ngModelOptions]="{standalone: true}"
+                                                                                                    (change)="onCustomDateChange($event)">
+                                                                                                </dl-date-time-picker>
+                                                                                            </div>
+
+                                                                                        </div>
+                                                                                        <div class="row mt-20">
+                                                                                            <div
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <div class="row">
+                                                                                                        <div
+                                                                                                            class="col-textend">
+                                                                                                            <input
+                                                                                                                class="btn-send"
+                                                                                                                type="submit"
+                                                                                                                (click)="saveGatePassData('Office')">
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+
+                                                                                    </div>
+                                                                                </div><!-- .billing-fields -->
+
+
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Blog Section End -->
+
+
+    </div>
+    <!-- Main content End -->
+    <footer id="rs-footer" class="rs-footer">
+        <app-footer></app-footer>
+    </footer>
+</body>

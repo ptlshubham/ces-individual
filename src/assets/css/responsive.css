@@ -1261,6 +1261,9 @@
         right: 40%;
         bottom: 130px;
     }
+    .full-width-header .rs-header .logo-part img {
+        margin-left: 0;
+    }
     .rs-banner.style13 .banner-content .search-widget .search-wrap [type="search"] {
         width: 413px;
     }
