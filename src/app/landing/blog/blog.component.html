@@ -75,7 +75,7 @@
                             <div class="col-lg-12 mb-70" *ngFor="let b of blogsData">
                                 <div class="blog-item">
                                     <div class="blog-img">
-                                        <a><img src="http://localhost:9000{{b.blogImage}}" alt=""></a>
+                                        <a><img src="http://localhost:9000{{b.blogImage}}" alt="blog-image"></a>
                                     </div>
                                     <div class="blog-content">
                                         <h3 class="blog-title mt-3"><a style="color: #30add3;">{{b.blogTitle}}</a></h3>
@@ -99,7 +99,7 @@
                                                 </li> -->
                                             </ul>
                                         </div>
-                                        <div class="blog-desc mt-3" [innerHtml]='b.blogDetails'>
+                                        <div class="blog-desc limitTextHeight" [innerHtml]='b.blogDetails'>
                                         </div>
                                         <div class="blog-button">
                                             <a class="blog-btn" (click)="continueBlog(b.id)">Continue Reading</a>
