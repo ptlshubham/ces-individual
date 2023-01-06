@@ -12,7 +12,7 @@ import { NewsComponent } from './news/news.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { GatePassComponent } from './gate-pass/gate-pass.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 
 
@@ -33,6 +33,7 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
     NgbModule,
     NgxPaginationModule,
     FormsModule,
+    ReactiveFormsModule,
     DlDateTimeDateModule,  
     DlDateTimePickerModule,
   ],

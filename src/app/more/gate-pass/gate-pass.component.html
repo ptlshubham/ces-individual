@@ -57,41 +57,24 @@
                                                                 <div class="course-overview">
                                                                     <div class="inner-box ">
                                                                         <div class="full-grid">
-                                                                            <form>
+                                                                            <form [formGroup]="form"
+                                                                                (ngSubmit)="onSubmit('Visitor')">
                                                                                 <div class="billing-fields">
                                                                                     <div class="checkout-title">
                                                                                         <h3>Visitor Details</h3>
                                                                                     </div>
                                                                                     <div class="form-content-box">
                                                                                         <div class="row">
-                                                                                            <!-- <div
-                                                                                                class="col-md-6 col-sm-6 col-xs-6">
-                                                                                                <div class="form-group">
-                                                                                                    <label>This Gate</label>
-                                                                                                    <select required
-                                                                                                        class="form-control form-select"
-                                                                                                        [ngModelOptions]="{standalone: true}"
-                                                                                                        [(ngModel)]="gatePassModel.institute">
-                                                                                                        <option
-                                                                                                            disabled>
-                                                                                                            Select
-                                                                                                            Institute
-                                                                                                        </option>
-                                                                                                        <option
-                                                                                                            value="{{c.name}}"
-                                                                                                            *ngFor="let c of instituteList">
-                                                                                                            {{c.name}}
-                                                                                                        </option>
-                                                                                                    </select>
-                                                                                                </div>
-                                                                                            </div> -->
                                                                                             <div
                                                                                                 class="col-md-6 col-sm-12 col-xs-12">
                                                                                                 <div class="form-group">
                                                                                                     <label>Whom to
                                                                                                         Meet</label>
-                                                                                                    <select name="users"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                    <select
+                                                                                                        name="selectMeet"
+                                                                                                        formControlName="selectMeet"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['selectMeet'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.meetingWith">
                                                                                                         <option
                                                                                                             disabled>
@@ -124,6 +107,15 @@
                                                                                                             Others
                                                                                                         </option>
                                                                                                     </select>
+                                                                                                    <div *ngIf="submitted && f['selectMeet'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['selectMeet'].errors['required']">
+                                                                                                            Whom to meet
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -135,9 +127,20 @@
                                                                                                         name="name"
                                                                                                         class="form-control-mod"
                                                                                                         type="text"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        formControlName="name"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.name"
                                                                                                         placeholder="Enter Visitor Name">
+                                                                                                    <div *ngIf="submitted && f['name'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['name'].errors['required']">
+                                                                                                            Visitor Name
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -150,28 +153,52 @@
                                                                                                         id="purpose"
                                                                                                         name="purpose"
                                                                                                         rows="5"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        formControlName="purpose"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['purpose'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.purpose"
                                                                                                         placeholder="Enter Visit For Purpose"></textarea>
+                                                                                                    <div *ngIf="submitted && f['purpose'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['purpose'].errors['required']">
+                                                                                                            Visit
+                                                                                                            For Purpose
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
-                                                                                            class="col-md-6 col-sm-12 col-xs-12">
-                                                                                            <div class="form-group">
-                                                                                                <label>Visitor
-                                                                                                    Contact
-                                                                                                    Number</label>
-                                                                                                <input id="contact"
-                                                                                                    name="contact"
-                                                                                                    class="form-control-mod"
-                                                                                                    type="number"
-                                                                                                    [ngModelOptions]="{standalone: true}"
-                                                                                                    [(ngModel)]="gatePassModel.contact"
-                                                                                                    placeholder="Enter Visitor Contact Number">
+                                                                                                class="col-md-6 col-sm-12 col-xs-12">
+                                                                                                <div class="form-group">
+                                                                                                    <label>Visitor
+                                                                                                        Contact
+                                                                                                        Number</label>
+                                                                                                    <input id="contact"
+                                                                                                        name="contact"
+                                                                                                        class="form-control-mod"
+                                                                                                        type="number"
+                                                                                                        formControlName="contact"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }"
+                                                                                                        [(ngModel)]="gatePassModel.contact"
+                                                                                                        placeholder="Enter Visitor Contact Number">
+                                                                                                    <div *ngIf="submitted && f['contact'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['contact'].errors['required']">
+                                                                                                            Visitor
+                                                                                                            Contact
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
                                                                                             </div>
                                                                                         </div>
-                                                                                        </div>
-                                                                                        
+
                                                                                         <div class="row">
                                                                                             <div
                                                                                                 class="col-md-6 col-sm-12 col-xs-12 mt-3">
@@ -189,7 +216,7 @@
                                                                                                     [ngModelOptions]="{standalone: true}"
                                                                                                     (change)="onCustomDateChange($event)">
                                                                                                 </dl-date-time-picker>
-                                                                                                
+
                                                                                             </div>
 
                                                                                         </div>
@@ -202,8 +229,7 @@
                                                                                                             class="col-textend">
                                                                                                             <input
                                                                                                                 class="btn-send"
-                                                                                                                type="submit"
-                                                                                                                (click)="saveGatePassData('Visitor')">
+                                                                                                                type="submit">
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
@@ -241,7 +267,8 @@
                                                                 <div class="course-overview">
                                                                     <div class="inner-box ">
                                                                         <div class="full-grid">
-                                                                            <form>
+                                                                            <form [formGroup]="form"
+                                                                                >
                                                                                 <div class="billing-fields">
                                                                                     <div class="checkout-title">
                                                                                         <h3>Office Employee Details</h3>
@@ -275,8 +302,11 @@
                                                                                                 <div class="form-group">
                                                                                                     <label>Whom to
                                                                                                         Meet</label>
-                                                                                                    <select name="users"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                    <select
+                                                                                                        name="selectMeet"
+                                                                                                        formControlName="selectMeet"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['selectMeet'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.meetingWith">
                                                                                                         <option
                                                                                                             disabled>
@@ -313,6 +343,15 @@
                                                                                                             Others
                                                                                                         </option>
                                                                                                     </select>
+                                                                                                    <div *ngIf="submitted && f['selectMeet'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['selectMeet'].errors['required']">
+                                                                                                            Whom to meet
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -324,9 +363,20 @@
                                                                                                         name="name"
                                                                                                         class="form-control-mod"
                                                                                                         type="text"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        formControlName="name"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.name"
                                                                                                         placeholder="Enter Visitor Name">
+                                                                                                    <div *ngIf="submitted && f['name'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['name'].errors['required']">
+                                                                                                            Visitor Name
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                             <div
@@ -339,9 +389,21 @@
                                                                                                         id="purpose"
                                                                                                         name="purpose"
                                                                                                         rows="5"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        formControlName="purpose"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['purpose'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.purpose"
                                                                                                         placeholder="Enter Visit For Purpose"></textarea>
+                                                                                                    <div *ngIf="submitted && f['purpose'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['purpose'].errors['required']">
+                                                                                                            Visit
+                                                                                                            For Purpose
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -356,9 +418,21 @@
                                                                                                         name="contact"
                                                                                                         class="form-control-mod"
                                                                                                         type="number"
-                                                                                                        [ngModelOptions]="{standalone: true}"
+                                                                                                        formControlName="contact"
+                                                                                                        class="form-control"
+                                                                                                        [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }"
                                                                                                         [(ngModel)]="gatePassModel.contact"
                                                                                                         placeholder="Enter Visitor Contact Number">
+                                                                                                    <div *ngIf="submitted && f['contact'].errors"
+                                                                                                        class="invalid-feedback">
+                                                                                                        <div
+                                                                                                            *ngIf="f['contact'].errors['required']">
+                                                                                                            Visitor
+                                                                                                            Contact
+                                                                                                            is
+                                                                                                            required
+                                                                                                        </div>
+                                                                                                    </div>
                                                                                                 </div>
                                                                                             </div>
                                                                                         </div>
@@ -392,7 +466,7 @@
                                                                                                             <input
                                                                                                                 class="btn-send"
                                                                                                                 type="submit"
-                                                                                                                (click)="saveGatePassData('Office')">
+                                                                                                                (click)="onSubmit('Office')">
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>

@@ -6,6 +6,7 @@ import { HomeService } from 'src/app/core/services/home.services';
 const pdfMake = require('pdfmake/build/pdfmake.js');
 import * as pdfFonts from "pdfmake/build/vfs_fonts";
 import { DatePipe } from '@angular/common';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 (pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
@@ -28,15 +29,37 @@ export class GatePassComponent implements OnInit {
 
   views = ['minute', 'hour', 'day', 'month', 'year'];
 
+  form: FormGroup = new FormGroup({
+    name: new FormControl(''),
+    purpose: new FormControl(''),
+    contact: new FormControl(''),
+    selectMeet:new FormControl(''),
+    
+  });
+  submitted = false;
+
   constructor(
     private homeService: HomeService,
     private toastrMessage: ToastrService,
-    private datePipe: DatePipe
+    private datePipe: DatePipe,
+    private formBuilder: FormBuilder
   ) { }
 
   ngOnInit(): void {
     this.getAllInstituteDetails();
+    this.form = this.formBuilder.group(
+      {
+        name: ['', Validators.required],
+        contact: ['', [Validators.required]],
+        purpose: ['', Validators.required],
+        selectMeet:['', Validators.required]
+      },
+    );
   }
+  get f(): { [key: string]: AbstractControl } {
+    return this.form.controls;
+  }
+
 
   getAllInstituteDetails() {
     this.homeService.getAllInstituteData().subscribe((res: any) => {
@@ -48,18 +71,24 @@ export class GatePassComponent implements OnInit {
     this.gatePassModel.dateTime = event.value;
 
   }
-  saveGatePassData(val: any) {
+  onSubmit(val: any) { 
+    this.submitted = true;
+    debugger
+    if (this.form.invalid) {
+      return;
+    }
     this.gatePassModel.role = val;
+      this.homeService.saveGatePassDetail(this.gatePassModel).subscribe((res: any) => {
+        this.gatePassModel.id = res;
+        this.generateInvoicePDF();
+        this.toastrMessage.success('Appointement added Successfully.', 'Success', { timeOut: 3000, });
 
-    this.homeService.saveGatePassDetail(this.gatePassModel).subscribe((res: any) => {
-      debugger
-      this.gatePassModel.id = res;
-      this.generateInvoicePDF();
-      this.toastrMessage.success('Appointement added Successfully.', 'Success', { timeOut: 3000, });
+      })
 
-    })
   }
   generateInvoicePDF() {
+    this.submitted = false;
+
     this.gatePassModel.dateTime = this.datePipe.transform(this.gatePassModel.dateTime, 'medium');
     console.log(this.gatePassModel)
 

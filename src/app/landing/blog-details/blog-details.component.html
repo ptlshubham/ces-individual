@@ -37,14 +37,24 @@
                             </li>
                             <!-- <li class="post-comment"> <i class="fa fa-comments-o"></i> 0</li> -->
                         </ul>
-                        <h3 class="blog-title mt-3"><a style="color: #30add3;">{{bDetails.blogTitle}}</a></h3>
+                        <h3 class="blog-title"><a style="color: #30add3;">{{bDetails.blogTitle}}</a></h3>
                         <div class="blog-desc" [innerHtml]='bDetails.blogDetails'>
-                            <h3 class="blog-title mt-3"><a style="color: #30add3;">{{bDetails.blogTitle}}</a></h3>
-
                         </div>
-
+                        <h3 class="blog-title mt-2">Our valuable accomplishments</h3>
+                        <owl-carousel-o [options]="customOptions">
+                            <ng-container *ngFor="let slide of slides">
+                                <ng-template carouselSlide [id]="slide.id">
+                                    <a href="{{slide.link}}" target="_blank">
+                                        <img [src]="slide.img" style="border: rgb(199, 199, 199) solid 2px;">
+                                        <h5 class="blog-title mt-2" style="color: #30add3;">{{slide.title}}</h5>
+                                    </a>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
                     </div>
+
                 </div>
+
             </div>
         </div>
     </div>

@@ -10710,7 +10710,7 @@ body .modal-backdrop {
   margin-bottom: 0;
 }
 .rs-inner-blog .blog-deatails .blog-full {
-  padding: 40px 45px 120px;
+  padding: 40px 45px 45px;
 }
 .rs-inner-blog .blog-deatails .blog-full .single-post-meta {
   display: flex;
