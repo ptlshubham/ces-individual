@@ -24,7 +24,7 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
     TermsConditionsComponent,
     NewsComponent,
     MagazineComponent,
-    GatePassComponent
+    GatePassComponent,
   ],
   imports: [
     CommonModule,
@@ -35,6 +35,9 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
     FormsModule,
     DlDateTimeDateModule,  
     DlDateTimePickerModule,
+  ],
+  exports:[
   ]
+
 })
 export class MoreModule { }
