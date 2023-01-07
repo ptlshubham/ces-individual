@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { HomeService } from 'src/app/core/services/home.services';
 
@@ -9,18 +10,45 @@ import { HomeService } from 'src/app/core/services/home.services';
 })
 export class ContactComponent implements OnInit {
   contactModel: any = {};
+  form: FormGroup = new FormGroup({
+    name: new FormControl(''),
+    subject: new FormControl(''),
+    contact: new FormControl(''),
+    email: new FormControl(''),
+    message: new FormControl(''),
+  });
+  submitted = false;
   constructor(
     private homeService: HomeService,
-    private toastrMessage:ToastrService
+    private toastrMessage: ToastrService,
+    private formBuilder: FormBuilder
+
   ) { }
 
   ngOnInit(): void {
+    this.form = this.formBuilder.group(
+      {
+        name: ['', Validators.required],
+        contact: ['', [Validators.required]],
+        subject: ['', Validators.required],
+        message: ['', Validators.required],
+        email: ['', [Validators.required, Validators.email]],
+      },
+    );
   }
-  saveContactUSData() {
-    this.contactModel.institute_id = localStorage.getItem('InstituteId');
+  get f(): { [key: string]: AbstractControl } {
+    return this.form.controls;
+  }
 
+  saveContactUSData() {
+    this.submitted = true;
+    if (this.form.invalid) {
+      return;
+    }
+    this.contactModel.institute_id = localStorage.getItem('InstituteId');
     this.homeService.saveContactUsDetails(this.contactModel).subscribe((res: any) => {
-      if (res == 'success'){
+      if (res == 'success') {
+        this.submitted = false;
         this.toastrMessage.success('Thank you for valuable feedback.', 'Success', { timeOut: 3000, });
       }
     })

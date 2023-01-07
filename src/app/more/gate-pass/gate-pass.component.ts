@@ -73,7 +73,6 @@ export class GatePassComponent implements OnInit {
   }
   onSubmit(val: any) { 
     this.submitted = true;
-    debugger
     if (this.form.invalid) {
       return;
     }

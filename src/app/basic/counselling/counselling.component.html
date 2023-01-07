@@ -57,53 +57,92 @@
                             <!-- <p>Have some suggestions or just want to say hi? Our  support team are ready to help you 24/7.</p> -->
                         </div>
                         <div id="form-messages"></div>
-                        <form id="contact-form" method="post">
+                        <form [formGroup]="form" (ngSubmit)="saveAppointementData()">
                             <fieldset>
                                 <div class="row">
                                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
                                         <div class="form-group">
-                                            <label>Student Name</label>
+                                            <label>Name</label>
                                             <input class="from-control" type="text" id="name" name="name"
-                                                placeholder="Enter Student Name" [ngModelOptions]="{standalone: true}"
-                                                [(ngModel)]="counselingModel.name">
+                                                formControlName="name"
+                                                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+                                                placeholder="Enter Name" [(ngModel)]="counselingModel.name">
+                                            <div *ngIf="submitted && f['name'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['name'].errors['required']">
+                                                    Name
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Class/Division</label>
                                             <input class="from-control" type="text" id="division" name="division"
-                                                placeholder="Enter Class / Division" [ngModelOptions]="{standalone: true}"
+                                                formControlName="division"
+                                                [ngClass]="{ 'is-invalid': submitted && f['division'].errors }"
+                                                placeholder="Enter Class / Division"
                                                 [(ngModel)]="counselingModel.division">
+                                            <div *ngIf="submitted && f['division'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['division'].errors['required']">
+                                                    Class/Division
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Email Address</label>
                                             <input class="from-control" type="text" id="email" name="email"
-                                                placeholder="Enter Email" [ngModelOptions]="{standalone: true}"
-                                                [(ngModel)]="counselingModel.email">
+                                                formControlName="email"
+                                                [ngClass]="{ 'is-invalid': submitted && f['email'].errors }"
+                                                placeholder="Enter Email" [(ngModel)]="counselingModel.email">
+                                            <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['email'].errors['required']">
+                                                    Email is required</div>
+                                                <div *ngIf="f['email'].errors['email']">
+                                                    Email is invalid</div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-6 mb-35 col-md-6 col-sm-6">
                                         <div class="form-group">
                                             <label>Contact Number</label>
-                                            <input class="from-control" type="text" id="phone" name="phone"
-                                                placeholder="Enter Contact Number" [ngModelOptions]="{standalone: true}"
-                                                [(ngModel)]="counselingModel.phone">
+                                            <input class="from-control" type="text" id="contact" name="contact"
+                                                formControlName="contact"
+                                                [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }"
+                                                placeholder="Enter Contact Number" [(ngModel)]="counselingModel.phone">
+                                            <div *ngIf="submitted && f['contact'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['contact'].errors['required']">
+                                                    Contact Number
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-lg-12 mb-35">
                                         <div class="form-group">
                                             <label>Select Institute</label>
                                             <select required class="form-control form-select"
-                                                [ngModelOptions]="{standalone: true}"
-                                                [(ngModel)]="counselingModel.instituteName">
+                                                [(ngModel)]="counselingModel.instituteName" formControlName="selectInst"
+                                                [ngClass]="{ 'is-invalid': submitted && f['selectInst'].errors }">
                                                 <option disabled>Select Institute
                                                 </option>
                                                 <option value="{{c.name}}" *ngFor="let c of instituteList">
                                                     {{c.name}}
                                                 </option>
                                             </select>
+                                            <div *ngIf="submitted && f['selectInst'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['selectInst'].errors['required']">
+                                                    Institute
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -111,13 +150,22 @@
                                         <div class="form-group">
                                             <label>Query/Message</label>
                                             <textarea class="from-control" id="message" name="message"
-                                                placeholder="Enter Query / Message" [ngModelOptions]="{standalone: true}"
+                                                formControlName="message"
+                                                [ngClass]="{ 'is-invalid': submitted && f['message'].errors }"
+                                                placeholder="Enter Query / Message"
                                                 [(ngModel)]="counselingModel.message"></textarea>
+                                            <div *ngIf="submitted && f['message'].errors" class="invalid-feedback">
+                                                <div *ngIf="f['message'].errors['required']">
+                                                    Institute
+                                                    is
+                                                    required
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group mb-0">
-                                    <input class="btn-send" type="submit" (click)="saveAppointementData()">
+                                    <input class="btn-send" type="submit">
                                 </div>
                             </fieldset>
                         </form>
