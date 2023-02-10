@@ -14,6 +14,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { GatePassComponent } from './gate-pass/gate-pass.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
+import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
     NewsComponent,
     MagazineComponent,
     GatePassComponent,
+    DeliveryShippingComponent,
   ],
   imports: [
     CommonModule,
