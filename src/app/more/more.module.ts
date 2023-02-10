@@ -15,6 +15,8 @@ import { GatePassComponent } from './gate-pass/gate-pass.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
 import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping.component';
+import { RefundCancellationComponent } from './refund-cancellation/refund-cancellation.component';
+import { PricingStructureComponent } from './pricing-structure/pricing-structure.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping
     MagazineComponent,
     GatePassComponent,
     DeliveryShippingComponent,
+    RefundCancellationComponent,
+    PricingStructureComponent,
   ],
   imports: [
     CommonModule,

@@ -4,7 +4,9 @@ import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping
 import { GatePassComponent } from './gate-pass/gate-pass.component';
 import { MagazineComponent } from './magazine/magazine.component';
 import { NewsComponent } from './news/news.component';
+import { PricingStructureComponent } from './pricing-structure/pricing-structure.component';
 import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
+import { RefundCancellationComponent } from './refund-cancellation/refund-cancellation.component';
 import { SearchComponent } from './search/search.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 export const MoreRoutes: Routes = [{
@@ -41,6 +43,14 @@ export const MoreRoutes: Routes = [{
         {
             path:'shipping-policy',
             component:DeliveryShippingComponent
+        },
+        {
+            path:'refund-cancellation-policy',
+            component:RefundCancellationComponent
+        },
+        {
+            path:'pricing-structure-for-online-registration',
+            component:PricingStructureComponent
         }
     ]
 }];
