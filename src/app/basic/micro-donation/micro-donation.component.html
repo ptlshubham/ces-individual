@@ -33,10 +33,10 @@
                                         <div class="course-overview" *ngIf="donate==false">
                                             <div class="inner-box ">
                                                 <div class="full-grid">
-                                                    <form [formGroup]="form" (ngSubmit)="saveDonationData()">
+                                                    <form [formGroup]="form" >
                                                         <div class="billing-fields">
                                                             <div class="checkout-title">
-                                                                <h3>Rahatokarsh Fund Donation</h3>
+                                                                <h3>Rahatokarsh Micro Donation</h3>
                                                             </div>
                                                             <div class="form-content-box">
 
@@ -101,15 +101,30 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                        
                                                                         <div class="form-group">
                                                                             <label>Donation Amount</label>
-                                                                            <input id="donationAmount"
+                                                                            <!-- <input id="donationAmount"
                                                                                 name="donationAmount"
                                                                                 class="form-control-mod" type="number"
                                                                                 formControlName="donationAmount"
                                                                                 [ngClass]="{ 'is-invalid': submitted && f['donationAmount'].errors }"
                                                                                 [(ngModel)]="donationModel.donationAmount"
-                                                                                placeholder="Enter Donation Amount">
+                                                                                placeholder="Enter Donation Amount"> -->
+                                                                                <div ngbDropdown class="d-inline-block">
+                                                                                    <button type="button" class="btn btn-outline-primary"
+                                                                                        id="dropdownBasic1" ngbDropdownToggle>
+                                                                                        {{selectedAmount}}
+                                                                                    </button>
+                                                                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                                                                                        <button ngbDropdownItem disabled>Select Donation Amount</button>
+                                                                                        <div *ngFor="let y of amount">
+                            
+                                                                                            <button ngbDropdownItem
+                                                                                                on-click="selectDonationAmount(y.amount)">{{y.amount}}</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
                                                                             <div *ngIf="submitted && f['donationAmount'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
@@ -121,7 +136,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                    <!-- <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
                                                                             <label>Donner Address</label>
 
@@ -141,12 +156,12 @@
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> -->
                                                                 </div>
                                                                 <div class="row mt-20">
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <input class="btn-send" type="submit">
+                                                                            <input class="btn-send" type="submit" (click)="saveDonationData()">
                                                                         </div>
                                                                     </div>
                                                                 </div>

@@ -13,14 +13,21 @@ export class MicroDonationComponent implements OnInit {
   instituteList: any = [];
   startYear = new Date().getFullYear();
   yearRange: any = [];
+  selectedAmount: any;
+  amount: any = [
+    { id: 1, amount: '100 ₹' },
+    { id: 1, amount: '250 ₹' },
+    { id: 1, amount: '500 ₹' },
+    { id: 1, amount: '1000 ₹' },
+  ]
   donate: boolean = false;
 
   form: FormGroup = new FormGroup({
     donnerName: new FormControl(''),
     contact: new FormControl(''),
-    donationAmount: new FormControl(''),
+    // donationAmount: new FormControl(''),
     email: new FormControl(''),
-    address: new FormControl('')
+    // address: new FormControl('')
   });
   submitted = false;
   constructor(
@@ -34,14 +41,16 @@ export class MicroDonationComponent implements OnInit {
   ngOnInit(): void {
     for (let i = 0; i < 100; i++) {
       this.yearRange.push(this.startYear - i);
+      this.selectedAmount = 'Select Donation Amount'
+
     }
     this.form = this.formBuilder.group(
       {
         donnerName: ['', Validators.required],
         contact: ['', [Validators.required]],
-        donationAmount: ['', [Validators.required]],
+        // donationAmount: ['', [Validators.required]],
         email: ['', [Validators.required, Validators.email]],
-        address: ['', [Validators.required]]
+        // address: ['', [Validators.required]]
       },
     );
   }
@@ -70,6 +79,11 @@ export class MicroDonationComponent implements OnInit {
 
     })
   }
-  
+  selectDonationAmount(val: any) {
+    this.selectedAmount = val;
+    this.donationModel.donationAmount = val;
+
+  }
+
 
 }
