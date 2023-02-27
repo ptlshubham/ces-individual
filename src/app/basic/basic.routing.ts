@@ -1,12 +1,15 @@
 import { Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { BearersComponent } from './bearers/bearers.component';
+import { BeneficiaryStudentsComponent } from './beneficiary-students/beneficiary-students.component';
 import { CelebrationComponent } from './celebration/celebration.component';
 import { ContactComponent } from './contact/contact.component';
 import { CounsellingComponent } from './counselling/counselling.component';
+import { DonnerListComponent } from './donner-list/donner-list.component';
 import { FundComponent } from './fund/fund.component';
 import { HistoryComponent } from './history/history.component';
 import { ManagementComponent } from './management/management.component';
+import { MicroDonationComponent } from './micro-donation/micro-donation.component';
 
 
 export const BasicRoutes: Routes = [{
@@ -43,6 +46,18 @@ export const BasicRoutes: Routes = [{
     {
         path: 'contact',
         component: ContactComponent
+    },
+    {
+        path:'beneficiary-students',
+        component:BeneficiaryStudentsComponent
+    },
+    {
+        path:'donner-list',
+        component:DonnerListComponent
+    },
+    {
+        path:'donation',
+        component:MicroDonationComponent
     }
     ]
 }];

@@ -14,6 +14,9 @@ import { ContactComponent } from './contact/contact.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
+import { DonnerListComponent } from './donner-list/donner-list.component';
+import { BeneficiaryStudentsComponent } from './beneficiary-students/beneficiary-students.component';
+import { MicroDonationComponent } from './micro-donation/micro-donation.component';
 
 
 
@@ -27,7 +30,10 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
     CelebrationComponent,
     CounsellingComponent,
     BearersComponent,
-    ContactComponent
+    ContactComponent,
+    DonnerListComponent,
+    BeneficiaryStudentsComponent,
+    MicroDonationComponent
   ],
   imports: [
     CommonModule,

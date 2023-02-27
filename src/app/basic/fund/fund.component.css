@@ -1,0 +1,10 @@
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    border-radius: 50px;
+    color: white;
+    background-color: #203154;
+}

@@ -58,6 +58,7 @@ export class ApiService {
   public static saveInfrastructureDetailsURL: string = ApiService.HOST_URL + '/admin/SaveInfrastructureDetails';
   public static getInfraDetailsByIdURL: string = ApiService.HOST_URL + '/admin/GetInfraDetailsById/';
   public static SaveAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/SaveAlumniDetails';
+  public static saveRahatokarshDonationURL: string = ApiService.HOST_URL + '/admin/SaveRahatokarshDonation';
   public static GetAlumniDetailsURL: string = ApiService.HOST_URL + '/admin/GetAlumniDetails';
   public static saveContactUsDetailsURL: string = ApiService.HOST_URL + '/admin/SaveContactUsDetails';
   public static getNewsByIdDetailsURL: string = ApiService.HOST_URL + '/admin/GetNewsByIdDetails/';

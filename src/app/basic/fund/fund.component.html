@@ -31,16 +31,7 @@
                                     data-bs-target="#prod-fundG" role="tab" aria-controls="prod-fundG"
                                     aria-selected="false">Gujarati</a>
                             </li>
-                            <li class="nav-item tab-btns" role="presentation">
-                                <a class="nav-link tab-btn" id="prod-donner-tab" data-bs-toggle="tab" href="#"
-                                    data-bs-target="#prod-donner" role="tab" aria-controls="prod-donner"
-                                    aria-selected="false">View Donner</a>
-                            </li>
-                            <li class="nav-item tab-btns" role="presentation">
-                                <a class="nav-link tab-btn" id="prod-student-tab" data-bs-toggle="tab" href="#"
-                                    data-bs-target="#prod-student" role="tab" aria-controls="prod-student"
-                                    aria-selected="false">Beneficiary Students</a>
-                            </li>
+
                         </ul>
 
 
@@ -100,7 +91,7 @@
                                             like to request the well – wishers of Society to donate a good amount.
                                         </p>
                                     </div>
-                                    <div class="blog-desc mb-40">
+                                    <div class="blog-desc mb-100">
                                         <p>
                                             You can deposit your valuable donation to the below mentioned bank. Moreover
                                             the amount of donation will be exempted from income tax under Clause 80 – G
@@ -121,6 +112,19 @@
                                             <li>Anand.</li>
                                         </ul>
                                     </div>
+
+                                </div>
+                                <div>
+                                    <div class="row">
+                                        <div class="col align-self-center mb-100"
+                                            style="text-align: center !important;">
+                                            <a routerLink="/donation" routerLinkActive="active"
+                                                class="btn btn-sm btn-outline-white mb-0"><i class="fa fa-inr"
+                                                    aria-hidden="true"></i> Micro
+                                                Donation</a>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="prod-fundG" role="tabpanel" aria-labelledby="prod-fundG-tab">
@@ -188,7 +192,7 @@
                                                     આપો.</p>
 
                                             </div>
-                                            <div class="blog-desc mb-40">
+                                            <div class="blog-desc mb-100">
                                                 <p>આપ આપણા અમૂલ્ય દાનને નીચે દર્શાવેલ બેંક ખાતામાં જમા કરાવી શકો
                                                     છો.વધુમાં આપે દાન પેટે આપેલ રકમને આવકવેરાની કલમ 80-G (5) હેઠળ
                                                     મુક્તિને પાત્ર છે.</p>
@@ -209,152 +213,19 @@
                                                     <li> આણંદ.</li>
                                                 </ul>
                                             </div>
+                                            
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="prod-donner" role="tabpanel"
-                                aria-labelledby="prod-donner-tab">
-                                <div class="content">
-                                    <div id="accordion" class="accordion-box">
-                                        <div class="blog-full">
-                                            <h4 style="color: red;text-align: center;" *ngIf="donnerData.length==0">
-                                                Data
-                                                Not Found !</h4>
-                                            <div class="blog-desc" *ngIf="donnerData.length>0">
-                                                <div class="title mb-40 md-mb-15">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h3 class="text-part">Donner's List</h3>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <div style="overflow-x:auto;">
-                                                    <table class="table">
-                                                        <thead>
-                                                            <tr>
-                                                                <th scope="col">Sr No.</th>
-                                                                <th scope="col">Date</th>
-                                                                <th scope="col">Name Of Donner</th>
-                                                                <th scope="col">City</th>
-                                                                <th scope="col">Amount</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr
-                                                                *ngFor="let c of donnerData | paginate: { id:'listing',itemsPerPage: 50, currentPage: p };let i=index">
-                                                                <th scope="row">{{c.index}}</th>
-                                                                <td>{{c.donationDate |date}}</td>
-                                                                <td>{{c.donnerName}}</td>
-                                                                <td>{{c.donnerCity}}</td>
-                                                                <td>{{c.amount}} ₹</td>
-                                                            </tr>
-                                                        </tbody>
-
-                                                    </table>
-                                                    <div class="row mt-3" *ngIf="donnerData.length>0">
-                                                        <div class="row">
-                                                            <div class="col text-end">
-                                                                <pagination-controls id="listing"
-                                                                    (pageChange)="p = $event">
-                                                                </pagination-controls>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                        <div>
+                                            <div class="row">
+                                                <div class="col align-self-center mb-100"
+                                                    style="text-align: center !important;">
+                                                    <a routerLink="/donation" routerLinkActive="active"
+                                                        class="btn btn-sm btn-outline-white mb-0"><i class="fa fa-inr"
+                                                            aria-hidden="true"></i> Micro
+                                                        Donation</a>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tab-pane fade mt-50" id="prod-student" role="tabpanel"
-                                aria-labelledby="prod-student-tab">
-                                <div class="content">
-                                    <div class="intro-info-tabs">
-
-                                        <div class="tab-content tabs-content" id="myTabContent">
-                                            <div class="tab-pane tab fade show active" id="prod-all" role="tabpanel"
-                                                aria-labelledby="prod-all-tab">
-                                                <div class="content white-bg">
-                                                    <div class="course-overview">
-                                                        <h4 style="color: red;text-align: center;"
-                                                            *ngIf="beneficiaryData.length==0">
-                                                            Data
-                                                            Not Found !</h4>
-                                                        <div class="inner-box " *ngIf="beneficiaryData.length>0">
-                                                            <div
-                                                                class="rs-degree style1 modify  pt-40 pb-70 md-pt-70 md-pb-40">
-                                                                <div class="title mb-40 md-mb-15">
-                                                                    <div class="row">
-                                                                        <div class="col">
-                                                                            <h3 class="text-part">Beneficiary Students
-                                                                            </h3>
-                                                                        </div>
-                                                                        <div class="col text-end">
-                                                                            <label for="drop">Select Year</label><br>
-                                                                            <div ngbDropdown class="d-inline-block">
-                                                                                <button type="button"
-                                                                                    class="btn btn-outline-primary"
-                                                                                    id="dropdownBasic1"
-                                                                                    ngbDropdownToggle>
-                                                                                    {{selectedYear}}
-                                                                                </button>
-                                                                                <div ngbDropdownMenu
-                                                                                    aria-labelledby="dropdownBasic1">
-                                                                                    <button ngbDropdownItem
-                                                                                        disabled>Select Year</button>
-                                                                                    <div *ngFor="let y of yearData">
-
-                                                                                        <button ngbDropdownItem
-                                                                                            on-click="selectYear(y.year)">{{y.year}}</button>
-                                                                                    </div>
-                                                                                </div>
-
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div style="overflow-x:auto;">
-                                                                    <table class="table">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th scope="col">Sr No.</th>
-                                                                                <th scope="col">Student Name
-                                                                                </th>
-                                                                                <th scope="col">School/College
-                                                                                    Name</th>
-                                                                                <th scope="col">Std/Course</th>
-                                                                                <th scope="col">Refund</th>
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody>
-                                                                            <tr
-                                                                                *ngFor="let c of beneficiaryData | paginate: {id:'listing1', itemsPerPage: 50, currentPage: pa };let i=index">
-                                                                                <th scope="row">{{c.index}}</th>
-                                                                                <td>{{c.studentName}}</td>
-                                                                                <td>{{c.instituteName}}</td>
-                                                                                <td>{{c.course}}</td>
-                                                                                <td>{{c.refundAmount}}</td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                    <div class="row mt-3"
-                                                                        *ngIf="beneficiaryData.length>0">
-                                                                        <div class="row">
-                                                                            <div class="col text-end">
-                                                                                <pagination-controls id="listing1"
-                                                                                    (pageChange)="pa = $event">
-                                                                                </pagination-controls>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+        
                                         </div>
                                     </div>
                                 </div>

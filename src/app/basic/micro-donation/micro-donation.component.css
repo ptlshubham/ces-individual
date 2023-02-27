@@ -1,0 +1,35 @@
+.form-group .btn-send {
+    padding: 16px 0px 16px 0px;
+    box-shadow: 0px 28px 50px 0px rgb(0 0 0 / 5%);
+    outline: none;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 3px;
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    background: #203154;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    width: 30%;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 991px) {
+    .form-group .btn-send {
+        width: 100%;
+    }
+}
+
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 1.4;
+    border-radius: 50px;
+    border-color: #203154;
+}
