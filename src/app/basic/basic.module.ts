@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HistoryComponent } from './history/history.component';
+// import { HistoryComponent } from './history/history.component';
 import { BasicRoutes } from './basic.routing';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -23,7 +23,7 @@ import { MicroDonationComponent } from './micro-donation/micro-donation.componen
 
 @NgModule({
   declarations: [
-    HistoryComponent,
+    // HistoryComponent,
     AboutComponent,
     ManagementComponent,
     FundComponent,

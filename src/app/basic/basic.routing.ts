@@ -7,7 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { DonnerListComponent } from './donner-list/donner-list.component';
 import { FundComponent } from './fund/fund.component';
-import { HistoryComponent } from './history/history.component';
+// import { HistoryComponent } from './history/history.component';
 import { ManagementComponent } from './management/management.component';
 import { MicroDonationComponent } from './micro-donation/micro-donation.component';
 
@@ -15,10 +15,10 @@ import { MicroDonationComponent } from './micro-donation/micro-donation.componen
 export const BasicRoutes: Routes = [{
     path: '',
     children: [
-    {
-        path: 'history',
-        component: HistoryComponent
-    },
+    // {
+    //     path: 'history',
+    //     component: HistoryComponent
+    // },
     {
         path: 'about',
         component: AboutComponent

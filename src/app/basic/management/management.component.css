@@ -7,24 +7,52 @@
     padding: 50px 10px 0 !important;
 }
 
+.btn {
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 6px;
+    outline: 0;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+}
+
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 10px 30px;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 1.4;
+    border-radius: 50px;
+    background-color: #203154;
+}
 
 @media only screen and (max-width: 480px) {
     .management {
         width: 50% !important;
     }
 
-    .rs-degree.style1.modify .title{
+    .rs-degree.style1.modify .title {
         font-size: 12px !important;
     }
+
     .rs-degree.style1 .degree-wrap .content-part {
         padding: 20px 10px 0 !important;
     }
+
     .ctitle {
         font-size: 9px !important;
         color: white !important;
     }
-    .h4{
+
+    .h4 {
         font-size: 20px !important;
     }
-    
+
 }
