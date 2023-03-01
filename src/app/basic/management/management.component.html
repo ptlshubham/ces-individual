@@ -88,7 +88,8 @@
                                     <div class="course-overview">
                                         <div class="inner-box ">
                                             <div class="rs-degree style1 modify pt-10 pb-0 md-pt-0 md-pb-0">
-                                                <h4 style="text-align: center;">Members of <b>Charotar Education Society</b> Management</h4>
+                                                <h4 style="text-align: center;">Members of <b>Charotar Education
+                                                        Society</b> Management</h4>
                                                 <div class="row">
                                                     <div
                                                         class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-xs-6 mb-30 management">
@@ -365,6 +366,319 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="row">
+                                                    <div class="col-sm-2 offset-sm-5">
+                                                        <div class="btn btn-sm btn-outline-white mb-0" style="text-align: center;" (click)="showContent = !showContent">
+                                                            <a  class="btn btn-sm btn-outline-white mb-0">{{ showContent ?
+                                                                'Office Bearers' : 'Office Bearers' }}</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              
+
+                                                
+                                            </div>
+
+                                            <div *ngIf="showContent">
+                                                <div class="container">
+                                                    <div class="blog-deatails">
+                                                        <!-- <div class="bs-img">
+                                                            <a href="#"><img src="assets/images/blog/inner/1.jpg" alt=""></a>
+                                                        </div> -->
+                                                        <div class="intro-info-tabs intro-section gray-bg ">
+                            
+                                                            <div class="tab-content tabs-content" id="myTabContent">
+                                                                <div class="tab-pane tab fade show active" id="prod-overview" role="tabpanel"
+                                                                    aria-labelledby="prod-overview-tab">
+                            
+                                                                    <div class="blog-full">
+                                                                        <div class="rs-faq-part orange-color pb-100 md-pb-70">
+                                                                            <div class="content-part mb-50 md-mb-30">
+                                                                                <!-- <div class="title mb-40 md-mb-15">
+                                                                                    <h3 class="text-part">Office Bearers
+                                                                                    </h3>
+                                                                                </div> -->
+                                                                                <div id="accordion" class="accordion">
+                                                                                    <div class="card">
+                                                                                        <div class="card-header">
+                                                                                            <a class="card-link" href="#" data-bs-toggle="collapse"
+                                                                                                data-bs-target="#collapseOne"
+                                                                                                area-expanded="true" style="text-align: center;">office bearers of charotar
+                                                                                                education society in the past
+                                                                                            </a>
+                                                                                        </div>
+                                                                                        <div id="collapseOne" class="collapse show"
+                                                                                            data-bs-parent="#accordion">
+                                                                                            <div class="card-body" style="overflow-x:auto;">
+                                                                                                <h4>List Of Chairman
+                                                                                                </h4>
+                                                                                                <table>
+                                                                                                    <tr>
+                                                                                                        <th>ક્રમ</th>
+                                                                                                        <th>નામ</th>
+                                                                                                        <th>સાલ</th>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>શ્રી ગોપાલદાસ બાઈદાસ દેસાઈ</td>
+                                                                                                        <td>1916 થી 1925</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>2</td>
+                                                                                                        <td>શ્રી દાદુભાઈ પુરુષોત્તમદાસ દેસાઈ</td>
+                                                                                                        <td>1626 થી 1933</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>3</td>
+                                                                                                        <td>શ્રી ચુનીભાઈ ઉમેદભાઈ પટેલ</td>
+                                                                                                        <td>1934 થી 1937</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>4</td>
+                                                                                                        <td>શ્રી મોતીભાઈ નરસિંહભાઈ પટેલ</td>
+                                                                                                        <td>1938 થી 1939</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>5</td>
+                                                                                                        <td>શ્રી ભાઈલાલભાઈ શંકરભાઈ પટેલ</td>
+                                                                                                        <td>1940 થી 1945</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>6</td>
+                                                                                                        <td>શ્રી ભાઈલાલભાઈ ઘાભાઈ પટેલ</td>
+                                                                                                        <td>1946 થી 1950</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>7</td>
+                                                                                                        <td>શ્રી મગનભાઈ શંકરભાઈ પટેલ</td>
+                                                                                                        <td>1951 થી 1960</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>8</td>
+                                                                                                        <td>શ્રી ડો. મગનભાઈ ડાહ્યાભાઈ પટેલ</td>
+                                                                                                        <td>1961 થી 1969</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>9</td>
+                                                                                                        <td>શ્રી ઈશ્વરભાઈ જેઠાભાઈ પટેલ</td>
+                                                                                                        <td>1970 થી 1982</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>10</td>
+                                                                                                        <td>શ્રી ચીમનભાઈ દાદુભાઈ દેસાઈ</td>
+                                                                                                        <td>1983 થી 1989</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>11</td>
+                                                                                                        <td>શ્રી બિપીનચંદ્ર પુરુષોત્તમદાસ પટેલ
+                                                                                                            (વકીલ)
+                                                                                                        </td>
+                                                                                                        <td>1990 થી 1991</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>12</td>
+                                                                                                        <td>શ્રી આશાભાઈ ગોરધનભાઈ પટેલ</td>
+                                                                                                        <td>1991 થી 1992</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>13</td>
+                                                                                                        <td>શ્રી બિપીનચંદ્ર પુરુષોત્તમદાસ પટેલ
+                                                                                                            (વકીલ)
+                                                                                                        </td>
+                                                                                                        <td>1992 થી 1993</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>14</td>
+                                                                                                        <td>શ્રી ગિરીશભાઈ મગનભાઈ પટેલ</td>
+                                                                                                        <td>1993 થી 20-6-1995</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>15</td>
+                                                                                                        <td> શ્રી દિલીપભાઈ મણિભાઈ પટેલ</td>
+                                                                                                        <td>20-6-1995 થી
+                                                                                                            2-11-1995</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>16</td>
+                                                                                                        <td>શ્રી હસમુખભાઈ મગનભાઈ પટેલ (વકીલ)</td>
+                                                                                                        <td>1995 થી 1996</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>17</td>
+                                                                                                        <td>શ્રી હરિશભાઈ ચીમનભાઈ પટેલ</td>
+                                                                                                        <td>1996 થી 1999</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>18</td>
+                                                                                                        <td>શ્રી ચીમનભાઈ મણીભાઈ પટેલ (સાથી)</td>
+                                                                                                        <td>1999 થી 2002</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>19</td>
+                                                                                                        <td>શ્રી રજનીકાંત ઠાકરલાલ શાહ</td>
+                                                                                                        <td>2002 થી 2004</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>20</td>
+                                                                                                        <td>શ્રી પ્રજ્ઞેશભાઈ વિઠ્ઠલભાઈ પટેલ</td>
+                                                                                                        <td>2004 થી 2007</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>21</td>
+                                                                                                        <td>શ્રી વિનોદભાઈ વલ્લભભાઈ પરમાર</td>
+                                                                                                        <td>2007 થી 2008</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>22</td>
+                                                                                                        <td>શ્રી અલ્પેશભાઈ નવીનચંદ્ર પટેલ</td>
+                                                                                                        <td>2008 થી 2009</td>
+                                                                                                    </tr>
+                            
+                                                                                                    <tr>
+                                                                                                        <td>23</td>
+                                                                                                        <td>શ્રી નિરવભાઈ નવીનચંદ્ર પટેલ</td>
+                                                                                                        <td>2009 થી આજ દીન સુધી</td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="card">
+                            
+                                                                                        <div id="collapseOne" class="collapse show"
+                                                                                            data-bs-parent="#accordion">
+                                                                                            <div class="card-body" style="overflow-x:auto;">
+                                                                                                <h4>List Of Secretary
+                                                                                                </h4>
+                                                                                                <table>
+                                                                                                    <tr>
+                                                                                                        <th>ક્રમ</th>
+                                                                                                        <th>નામ</th>
+                                                                                                        <th>સાલ</th>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>1</td>
+                                                                                                        <td>શ્રી અંબાલાલ મોતીભાઈ પટેલ</td>
+                                                                                                        <td>1916 થી 1917</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>2</td>
+                                                                                                        <td>શ્રી ભીખાભાઈ કુબેરભાઈ પટેલ</td>
+                                                                                                        <td>1918 થી 1924</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>3</td>
+                                                                                                        <td>શ્રી ચુનીલાલ વ. ભટ્ટ</td>
+                                                                                                        <td>1925 થી 1926</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>4</td>
+                                                                                                        <td>શ્રી ભીખાભાઈ કુબેરભાઈ પટેલ</td>
+                                                                                                        <td>1926 થી 1927</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>5</td>
+                                                                                                        <td>શ્રી આશાભાઈ નરસિંહભાઈ પટેલ</td>
+                                                                                                        <td>1928 થી 1936</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>6</td>
+                                                                                                        <td>શ્રી ચંદુભાઈ રાવજીભાઈ પટેલ</td>
+                                                                                                        <td>1937 થી 1938</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>7</td>
+                                                                                                        <td>શ્રી આશાભાઈ નરસિંહભાઈ પટેલ</td>
+                                                                                                        <td>1939 થી 1940</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>8</td>
+                                                                                                        <td>શ્રી ચંદુભાઈ રાવજીભાઈ પટેલ</td>
+                                                                                                        <td>1941 થી 1943</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>9</td>
+                                                                                                        <td>શ્રી રાવજીભાઈ ચતુરભાઈ પટેલ</td>
+                                                                                                        <td>1944 થી 1964</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>10</td>
+                                                                                                        <td>શ્રી અંબાલાલ છોટાભાઈ પટેલ</td>
+                                                                                                        <td>1965 થી 1969</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>11</td>
+                                                                                                        <td>શ્રી વિઠ્ઠલભાઈ જેઠાભાઈ પટેલ</td>
+                                                                                                        <td>1970 થી 1972</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>12</td>
+                                                                                                        <td>શ્રી મગનભાઈ પી. ઓઝા</td>
+                                                                                                        <td>1973 થી 1975</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>13</td>
+                                                                                                        <td>શ્રી વિઠ્ઠલભાઈ જેઠાભાઈ પટેલ</td>
+                                                                                                        <td>1976 થી 1977</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>14</td>
+                                                                                                        <td>શ્રી રમણભાઈ નારણભાઈ પટેલ</td>
+                                                                                                        <td>1978 થી 1981</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>15</td>
+                                                                                                        <td>શ્રી માધવલાલ જમનાદાસ દેસાઈ</td>
+                                                                                                        <td>1982 થી 1984</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>16</td>
+                                                                                                        <td>શ્રી મનુભાઈ મણિભાઈ પટેલ</td>
+                                                                                                        <td>1985 થી 1991</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>17</td>
+                                                                                                        <td>શ્રી દિનેશભાઈ કેશવલાલ પટેલ</td>
+                                                                                                        <td>1991 થી 1999</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>18</td>
+                                                                                                        <td>શ્રી બિપીનચંદ્ર પુરુષોત્તમદાસ પટેલ
+                                                                                                            (વકીલ).
+                                                                                                        </td>
+                                                                                                        <td>1999 થી 2006</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>19</td>
+                                                                                                        <td>શ્રી પિનલભાઈ કાંતિભાઈ પટેલ</td>
+                                                                                                        <td>2006 થી 2008</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>20</td>
+                                                                                                        <td>શ્રી ચેતનભાઈ મણીભાઈ પટેલ</td>
+                                                                                                        <td>2008 થી 2009</td>
+                                                                                                    </tr>
+                                                                                                    <tr>
+                                                                                                        <td>21</td>
+                                                                                                        <td>શ્રી કેતનભાઈ પુરુષોત્તમદાસ પટેલ</td>
+                                                                                                        <td>2009 આજ સુધી</td>
+                                                                                                    </tr>
+                            
+                                                                                                </table>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                            
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                            
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -373,7 +687,25 @@
                         </div>
                     </div>
                 </div>
+                
+
+               
+
+
+
+
+
+
+                <!-- bearers -->
+
+                <!-- bearers end -->
+
             </div>
+
+
+
+
+
         </div>
     </section>
     <!-- Main content End -->

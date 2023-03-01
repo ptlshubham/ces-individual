@@ -7,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagementComponent implements OnInit {
 
-  constructor() { }
 
+  constructor() { }
+   showContent: boolean = false;
   ngOnInit(): void {
   }
 
