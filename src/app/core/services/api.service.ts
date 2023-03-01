@@ -64,6 +64,7 @@ export class ApiService {
   public static getAllBirthdayDetailsURL: string = ApiService.HOST_URL + '/admin/GetAllBirthdayDetails';
   public static getAllNewsDetailsURL: string = ApiService.HOST_URL + '/admin/GetAllNewsDetails/';
   public static getNewsOnlyForCESURL: string = ApiService.HOST_URL + '/admin/GetNewsOnlyForCES/';
+  public static getAllAnswerkeyURL: string = ApiService.HOST_URL + '/admin/GetAllAnswerkey';
   public static getMagazineListURL: string = ApiService.HOST_URL + '/admin/GetMagazineList';
   public static saveCounselingDetailsURL: string = ApiService.HOST_URL + '/admin/SaveCounselingDetails'
 

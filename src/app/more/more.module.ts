@@ -17,6 +17,7 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
 import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping.component';
 import { RefundCancellationComponent } from './refund-cancellation/refund-cancellation.component';
 import { PricingStructureComponent } from './pricing-structure/pricing-structure.component';
+import { AnswerKeyComponent } from './answer-key/answer-key.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { PricingStructureComponent } from './pricing-structure/pricing-structure
     DeliveryShippingComponent,
     RefundCancellationComponent,
     PricingStructureComponent,
+    AnswerKeyComponent,
   ],
   imports: [
     CommonModule,

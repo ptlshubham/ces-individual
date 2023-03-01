@@ -94,6 +94,9 @@ export class HomeService {
     getNewsOnlyForCESURL(institute_id: any) {
         return this.http.get(ApiService.getNewsOnlyForCESURL + institute_id);
     }
+    getAnswerkeyOnlyForCESURL() {
+        return this.http.get(ApiService.getAllAnswerkeyURL);
+    }
     saveCounselingDetail(data: any) {
         return this.http.post(ApiService.saveCounselingDetailsURL, data);
     }

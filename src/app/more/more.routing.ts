@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { AnswerKeyComponent } from './answer-key/answer-key.component';
 import { CampusComponent } from './campus/campus.component';
 import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping.component';
 import { GatePassComponent } from './gate-pass/gate-pass.component';
@@ -51,6 +52,10 @@ export const MoreRoutes: Routes = [{
         {
             path:'pricing-structure-for-online-registration',
             component:PricingStructureComponent
+        },
+        {
+            path:'answer-key',
+            component:AnswerKeyComponent
         }
     ]
 }];
