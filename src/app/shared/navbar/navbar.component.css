@@ -343,3 +343,41 @@ a{
 .btn-outline-info {
   border-color: #203154;
 }
+
+/* .blink {
+  animation: blinker 1s linear infinite;
+  color: #203154;
+  font-size: 25px !important;
+  
+}
+@keyframes blinker {
+  100% {
+    opacity: 0;
+  }
+} */
+
+
+.blink {
+  animation: blinker 0.6s linear infinite;
+  color: white;
+  font-size: 22px !important;
+  background-color: #203154;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 20px;
+  
+  
+  padding: 6px;
+  
+  
+}
+
+@keyframes blinker {
+  90% {
+    opacity: 0.39999;
+  }
+}
+
+/* .blink {
+  animation: blink 3s infinite;
+} */
+

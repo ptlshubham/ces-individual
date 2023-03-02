@@ -91,17 +91,21 @@ border-radius: 50px;
 }
 .namo .namo-quote {
     width: 60%;
-    background: #d72b32;
+    /* background: #ce989a; */
+    background-image: url("/assets/images/Naman Texture.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-right: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-left: 30px;
+    
 }
 .namo .namo-quote h3 {
     font-size: 30px;
-    color: #fff;
+    color: #59513f;
     font-weight: 300;
 }
 .namo .namo-quote h6 {

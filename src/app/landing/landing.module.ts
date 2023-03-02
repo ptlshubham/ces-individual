@@ -20,6 +20,7 @@ import { RahotkarshFundComponent } from './rahotkarsh-fund/rahotkarsh-fund.compo
 import { MainComponent } from './main/main.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogComponent } from './blog/blog.component';
+import { ImageSectionComponent } from './image-section/image-section.component';
 
 
 
@@ -40,6 +41,7 @@ import { BlogComponent } from './blog/blog.component';
     RahotkarshFundComponent,
     BlogDetailsComponent,
     BlogComponent,
+    ImageSectionComponent,
     
   ],
   imports: [
