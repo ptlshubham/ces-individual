@@ -112,7 +112,7 @@ export class GatePassComponent implements OnInit {
             columns: [
               {
                 image: 'webimg',
-                link: 'http://www.cesociety.in',
+                link: 'https://www.cesociety.in',
                 width: 320,
                 height: 60,
                 alignment: 'center',
@@ -144,7 +144,7 @@ export class GatePassComponent implements OnInit {
                 {
                   alignment: 'left',
                   bold: true,
-                  link: 'http://www.cesociety.in', style: 'link',
+                  link: 'https://www.cesociety.in', style: 'link',
                   text: 'Email: cesociety@cesociety.in',
 
                 },
@@ -173,7 +173,7 @@ export class GatePassComponent implements OnInit {
             columns: [
               {
                 image: 'booking',
-                link: 'http://www.cesociety.in',
+                link: 'https://www.cesociety.in',
                 width: 340,
                 height: 120,
                 alignment: 'center',
@@ -241,8 +241,8 @@ export class GatePassComponent implements OnInit {
         ],
 
         images: {
-          webimg: 'https://ci3.googleusercontent.com/proxy/WQs4-fw8izDd12HVWmJpfGFswM-dr_DH2aQ2N6UjBp0e4eqITRhlMWWaj6VuiPvU72NIXjEqY22KhfhT-Yx_nQujzw=s0-d-e1-ft#http://www.cesociety.in/email/images/logo-al.png',
-          booking: 'https://ci4.googleusercontent.com/proxy/Kd8Ar_LbG-bNHEm2Igh6QLXXVrp-x3vNDjDTtYhwdQtqIJpNqHiISQgXQfq2tbbqP0EIlV9EBWTpj486LVoHhy0U=s0-d-e1-ft#http://www.cesociety.in/email/images/appo-6.png'
+          webimg: 'https://ci3.googleusercontent.com/proxy/WQs4-fw8izDd12HVWmJpfGFswM-dr_DH2aQ2N6UjBp0e4eqITRhlMWWaj6VuiPvU72NIXjEqY22KhfhT-Yx_nQujzw=s0-d-e1-ft#https://www.cesociety.in/email/images/logo-al.png',
+          booking: 'https://ci4.googleusercontent.com/proxy/Kd8Ar_LbG-bNHEm2Igh6QLXXVrp-x3vNDjDTtYhwdQtqIJpNqHiISQgXQfq2tbbqP0EIlV9EBWTpj486LVoHhy0U=s0-d-e1-ft#https://www.cesociety.in/email/images/appo-6.png'
         },
         styles:
         {
@@ -320,7 +320,7 @@ export class GatePassComponent implements OnInit {
             columns: [
               {
                 image: 'webimg',
-                link: 'http://www.cesociety.in',
+                link: 'https://www.cesociety.in',
                 width: 320,
                 height: 60,
                 alignment: 'center',
@@ -352,7 +352,7 @@ export class GatePassComponent implements OnInit {
                 {
                   alignment: 'left',
                   bold: true,
-                  link: 'http://www.cesociety.in', style: 'link',
+                  link: 'https://www.cesociety.in', style: 'link',
                   text: 'Email: cesociety@cesociety.in',
 
                 },
@@ -381,7 +381,7 @@ export class GatePassComponent implements OnInit {
             columns: [
               {
                 image: 'booking',
-                link: 'http://www.cesociety.in',
+                link: 'https://www.cesociety.in',
                 width: 340,
                 height: 120,
                 alignment: 'center',
@@ -445,8 +445,8 @@ export class GatePassComponent implements OnInit {
         ],
 
         images: {
-          webimg: 'https://ci3.googleusercontent.com/proxy/WQs4-fw8izDd12HVWmJpfGFswM-dr_DH2aQ2N6UjBp0e4eqITRhlMWWaj6VuiPvU72NIXjEqY22KhfhT-Yx_nQujzw=s0-d-e1-ft#http://www.cesociety.in/email/images/logo-al.png',
-          booking: 'https://ci4.googleusercontent.com/proxy/Kd8Ar_LbG-bNHEm2Igh6QLXXVrp-x3vNDjDTtYhwdQtqIJpNqHiISQgXQfq2tbbqP0EIlV9EBWTpj486LVoHhy0U=s0-d-e1-ft#http://www.cesociety.in/email/images/appo-6.png'
+          webimg: 'https://ci3.googleusercontent.com/proxy/WQs4-fw8izDd12HVWmJpfGFswM-dr_DH2aQ2N6UjBp0e4eqITRhlMWWaj6VuiPvU72NIXjEqY22KhfhT-Yx_nQujzw=s0-d-e1-ft#https://www.cesociety.in/email/images/logo-al.png',
+          booking: 'https://ci4.googleusercontent.com/proxy/Kd8Ar_LbG-bNHEm2Igh6QLXXVrp-x3vNDjDTtYhwdQtqIJpNqHiISQgXQfq2tbbqP0EIlV9EBWTpj486LVoHhy0U=s0-d-e1-ft#https://www.cesociety.in/email/images/appo-6.png'
         },
         styles:
         {
