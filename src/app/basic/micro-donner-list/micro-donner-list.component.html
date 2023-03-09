@@ -41,6 +41,7 @@
                                                     <tr>
                                                         <th scope="col">Sr No.</th>
                                                         <th scope="col">Date</th>
+                                                        <th scope="col">Certificate Number</th>
                                                         <th scope="col">Name Of Donner</th>
                                                         <th scope="col">Amount</th>
                                                     </tr>
@@ -50,6 +51,7 @@
                                                         *ngFor="let c of donnerData | paginate: { id:'listing',itemsPerPage: 50, currentPage: p };let i=index">
                                                         <th scope="row">{{c.index}}</th>
                                                         <td>{{c.createddate |date}}</td>
+                                                        <td>0000{{c.id}}</td>
                                                         <td>{{c.name}}</td>
                                                         <td>{{c.amount}}</td>
                                                     </tr>
