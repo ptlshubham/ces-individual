@@ -17,6 +17,7 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { DonnerListComponent } from './donner-list/donner-list.component';
 import { BeneficiaryStudentsComponent } from './beneficiary-students/beneficiary-students.component';
 import { MicroDonationComponent } from './micro-donation/micro-donation.component';
+import { MicroDonnerListComponent } from './micro-donner-list/micro-donner-list.component';
 
 
 
@@ -33,7 +34,8 @@ import { MicroDonationComponent } from './micro-donation/micro-donation.componen
     ContactComponent,
     DonnerListComponent,
     BeneficiaryStudentsComponent,
-    MicroDonationComponent
+    MicroDonationComponent,
+    MicroDonnerListComponent
   ],
   imports: [
     CommonModule,

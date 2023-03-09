@@ -10,6 +10,7 @@ import { FundComponent } from './fund/fund.component';
 // import { HistoryComponent } from './history/history.component';
 import { ManagementComponent } from './management/management.component';
 import { MicroDonationComponent } from './micro-donation/micro-donation.component';
+import { MicroDonnerListComponent } from './micro-donner-list/micro-donner-list.component';
 
 
 export const BasicRoutes: Routes = [{
@@ -58,6 +59,9 @@ export const BasicRoutes: Routes = [{
     {
         path:'donation',
         component:MicroDonationComponent
+    },{
+        path:'micro-donner',
+        component:MicroDonnerListComponent
     }
     ]
 }];

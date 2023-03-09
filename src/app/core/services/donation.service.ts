@@ -45,4 +45,7 @@ export class DonationService {
 
         return this.http.post(ApiService.saveBulkBeneficiaryDetailsURL, data);
     }
+    getVerifiedMicroDonnerDetails(){
+        return this.http.get(ApiService.getRahatokarshDonationListURL);
+    }
 }

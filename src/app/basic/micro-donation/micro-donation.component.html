@@ -30,32 +30,41 @@
                                     aria-labelledby="prod-Photo-tab">
                                     <div class="content white-bg pt-10 ">
                                         <!-- Cource Overview -->
-                                        <div class="course-overview" >
-                                            <div class="inner-box " >
+                                        <div class="course-overview">
+                                            <div class="inner-box ">
                                                 <div class="full-grid">
-                                                    
-                                                        <div class="billing-fields">
-                                                            <div class="checkout-title">
-                                                                <h3 style="text-align: center;">“દાનયજ્ઞ”</h3>
-                                                            </div>
-                                                            <div class="form-content-box" style="margin-bottom: 10px !important">
 
-                                                                <div class="row">
-                                                                    
-                                                                    <p style="color: black;padding-top: 10px">
-                                                                        ફૂલ નહીં તો ફૂલની પાંખડી – એવા ઉમદા અભિગમ સાથે આપ સૌને આ “દાનયજ્ઞ” માં ચરોતર એજ્યુકેશન સોસાયટી આવકારે છે.
-                                                                        આ ઉમદા અભિગમનો મૂળ હેતુ જરૂરિયાતમંદ વિદ્યાર્થીઓને શિક્ષણ સહાય કરવા માટે છે.
-                                                                        ટીપે ટીપે સરોવર ભરાય તેમ, આપના તરફથી જમા થયેલી નજીવી રકમ (રૂા. 05 થી ..................) તેઓના જીવન ઘડતરમાં વિશેષ પ્રોત્સાહક બની રહેશે.<br>
-                                                                        <b style="color: red;">આપે કરેલું દાન ચરોતર એજ્યુકેશન સોસાયટીની વેબસાઇટ પર આપની સંપૂર્ણ માહિતી સાથે દર્શાવવામાં આવશે તેમજ આપેલ દાનનું ઇ-પ્રમાણત્ર આપવામાં આવશે</b>
-                                                                    </p> 
-                                                                    
-                                                                    
-                                                                    
-                                                                </div>
-                                                                
-                                                            </div>
+                                                    <div class="billing-fields">
+                                                        <div class="checkout-title">
+                                                            <h3 style="text-align: center;">“દાનયજ્ઞ”</h3>
                                                         </div>
-                                                    
+                                                        <div class="form-content-box"
+                                                            style="margin-bottom: 10px !important">
+
+                                                            <div class="row">
+
+                                                                <p style="color: black;padding-top: 10px">
+                                                                    ફૂલ નહીં તો ફૂલની પાંખડી – એવા ઉમદા અભિગમ સાથે આપ
+                                                                    સૌને આ “દાનયજ્ઞ” માં ચરોતર એજ્યુકેશન સોસાયટી આવકારે
+                                                                    છે.
+                                                                    આ ઉમદા અભિગમનો મૂળ હેતુ જરૂરિયાતમંદ વિદ્યાર્થીઓને
+                                                                    શિક્ષણ સહાય કરવા માટે છે.
+                                                                    ટીપે ટીપે સરોવર ભરાય તેમ, આપના તરફથી જમા થયેલી નજીવી
+                                                                    રકમ (રૂા. 05 થી ..................) તેઓના જીવન
+                                                                    ઘડતરમાં વિશેષ પ્રોત્સાહક બની રહેશે.<br>
+                                                                    <b style="color: red;">આપે કરેલું દાન ચરોતર
+                                                                        એજ્યુકેશન સોસાયટીની વેબસાઇટ પર આપની સંપૂર્ણ
+                                                                        માહિતી સાથે દર્શાવવામાં આવશે તેમજ આપેલ દાનનું
+                                                                        ઇ-પ્રમાણત્ર આપવામાં આવશે</b>
+                                                                </p>
+
+
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>
@@ -85,7 +94,7 @@
                                         <div class="course-overview" *ngIf="donate==false">
                                             <div class="inner-box ">
                                                 <div class="full-grid">
-                                                    <form [formGroup]="form" >
+                                                    <form [formGroup]="form">
                                                         <div class="billing-fields">
                                                             <div class="checkout-title">
                                                                 <h3>Rahatokarsh Micro Donation</h3>
@@ -153,7 +162,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
-                                                                        
+
                                                                         <div class="form-group">
                                                                             <label>Donation Amount</label>
                                                                             <!-- <input id="donationAmount"
@@ -163,20 +172,25 @@
                                                                                 [ngClass]="{ 'is-invalid': submitted && f['donationAmount'].errors }"
                                                                                 [(ngModel)]="donationModel.donationAmount"
                                                                                 placeholder="Enter Donation Amount"> -->
-                                                                                <div ngbDropdown class="d-inline-block">
-                                                                                    <button type="button" class="btn btn-outline-primary"
-                                                                                        id="dropdownBasic1" ngbDropdownToggle>
-                                                                                        {{selectedAmount}}
-                                                                                    </button>
-                                                                                    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-                                                                                        <button ngbDropdownItem disabled>Select Donation Amount</button>
-                                                                                        <div *ngFor="let y of amount">
-                            
-                                                                                            <button ngbDropdownItem
-                                                                                                on-click="selectDonationAmount(y.amount)">{{y.amount}}</button>
-                                                                                        </div>
+                                                                            <div ngbDropdown class="d-inline-block">
+                                                                                <button type="button"
+                                                                                    class="btn btn-outline-primary"
+                                                                                    id="dropdownBasic1"
+                                                                                    ngbDropdownToggle>
+                                                                                    {{selectedAmount}}
+                                                                                </button>
+                                                                                <div ngbDropdownMenu
+                                                                                    aria-labelledby="dropdownBasic1">
+                                                                                    <button ngbDropdownItem
+                                                                                        disabled>Select Donation
+                                                                                        Amount</button>
+                                                                                    <div *ngFor="let y of amount">
+
+                                                                                        <button ngbDropdownItem
+                                                                                            on-click="selectDonationAmount(y.amount)">{{y.amount}}</button>
                                                                                     </div>
                                                                                 </div>
+                                                                            </div>
                                                                             <div *ngIf="submitted && f['donationAmount'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
@@ -211,10 +225,13 @@
                                                                     </div> -->
                                                                 </div>
                                                                 <div class="row mt-20">
-                                                                    <div class="col-md-6 col-sm-12 col-xs-12">
-                                                                        <div class="form-group">
-                                                                            <input class="btn-send" type="submit" (click)="saveDonationData()">
-                                                                        </div>
+
+                                                                    <div class="col text-center">
+                                                                        <a class="btn btn-sm btn-outline-white mb-0"
+                                                                            (click)="saveDonationData()">Submit <i
+                                                                                class="fa fa-arrow-right"
+                                                                                aria-hidden="true"></i></a>
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -240,7 +257,7 @@
                 </div>
             </div>
         </section>
-        
+
     </div>
 
     <footer id="rs-footer" class="rs-footer">
