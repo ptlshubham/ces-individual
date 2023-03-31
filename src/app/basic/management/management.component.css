@@ -25,6 +25,7 @@
 .btn-sm,
 .btn-group-sm>.btn {
     padding: 10px 30px;
+    padding-inline: 10px;
     font-size: 14px;
     color: white;
     text-transform: uppercase;
