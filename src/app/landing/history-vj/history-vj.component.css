@@ -1,0 +1,33 @@
+ul {
+    padding-left: 2rem;
+}
+.sec-title2 .title.purple-color {
+    color: #4e49a1 !important;
+  }
+  .sec-title3 .sub-title {
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 500;
+    color: #ff5421;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .purple-color{
+    color: #4e49a1;
+  }
+  .rs-about.style1 .img-part {
+    position: relative;
+  }
+  /* body {
+    font-size: 15px;
+    color: #505050;
+    font-family: 'Rubik', sans-serif;
+    vertical-align: baseline;
+    line-height: 26px;
+    font-weight: 400;
+    overflow-x: hidden;
+  } */
+.partition-bg-wrap {
+    background: #f2fafb!important;
+    position: relative;
+  }

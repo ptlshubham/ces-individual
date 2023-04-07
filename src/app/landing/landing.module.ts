@@ -21,6 +21,7 @@ import { MainComponent } from './main/main.component';
 import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogComponent } from './blog/blog.component';
 import { ImageSectionComponent } from './image-section/image-section.component';
+import { HistoryVjComponent } from './history-vj/history-vj.component';
 
 
 
@@ -42,6 +43,7 @@ import { ImageSectionComponent } from './image-section/image-section.component';
     BlogDetailsComponent,
     BlogComponent,
     ImageSectionComponent,
+    HistoryVjComponent,
     
   ],
   imports: [
