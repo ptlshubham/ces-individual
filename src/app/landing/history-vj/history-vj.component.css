@@ -1,33 +1,27 @@
-ul {
-    padding-left: 2rem;
+
+  .btn {
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 6px;
+    outline: 0;
+    white-space: nowrap;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
 }
-.sec-title2 .title.purple-color {
-    color: #4e49a1 !important;
-  }
-  .sec-title3 .sub-title {
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: 500;
-    color: #ff5421;
+
+.btn-sm,
+.btn-group-sm>.btn {
+    padding: 5px 0px;
+    padding-inline: 10px;
+    font-size: 14px;
+    color: white;
     text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  .purple-color{
-    color: #4e49a1;
-  }
-  .rs-about.style1 .img-part {
-    position: relative;
-  }
-  /* body {
-    font-size: 15px;
-    color: #505050;
-    font-family: 'Rubik', sans-serif;
-    vertical-align: baseline;
-    line-height: 26px;
-    font-weight: 400;
-    overflow-x: hidden;
-  } */
-.partition-bg-wrap {
-    background: #f2fafb!important;
-    position: relative;
-  }
+    /* line-height: 1.0; */
+    border-radius: 50px;
+    background-color: #203154;
+}

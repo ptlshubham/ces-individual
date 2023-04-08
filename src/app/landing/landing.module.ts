@@ -22,6 +22,7 @@ import { BlogDetailsComponent } from './blog-details/blog-details.component';
 import { BlogComponent } from './blog/blog.component';
 import { ImageSectionComponent } from './image-section/image-section.component';
 import { HistoryVjComponent } from './history-vj/history-vj.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
 
@@ -51,7 +52,8 @@ import { HistoryVjComponent } from './history-vj/history-vj.component';
     RouterModule.forChild(LandingRoutes),
     SharedModule,
     NgbModule,
-    CarouselModule
+    CarouselModule,
+    PdfViewerModule
   ],
   exports:[
     MainComponent,
