@@ -1,0 +1,28 @@
+/* .content-part  .title-ctitle{
+    color: white;
+} */
+/* .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20%;
+  }
+
+.mb-30 .social-activity{
+    font-size: 18px;
+    color: black;
+} */
+
+.zoom {
+    transition: transform .5s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+.course-overview h3{
+  font-size:36px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #203154;
+}

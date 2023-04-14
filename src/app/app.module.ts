@@ -13,11 +13,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-datetimepicker';
+import { SocialActivityComponent } from './social-activity/social-activity.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlumniComponent
+    AlumniComponent,
+    SocialActivityComponent
   ],
   imports: [
     BrowserModule,

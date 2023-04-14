@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { AlumniComponent } from './alumni/alumni.component';
+import { SocialActivityComponent } from './social-activity/social-activity.component';
 
 
 export const AppRoutes: Routes = [
@@ -19,4 +20,8 @@ export const AppRoutes: Routes = [
         path: 'alumni',
         component: AlumniComponent
     },
+    {
+        path:'social-activity',
+        component:SocialActivityComponent
+    }
 ];
