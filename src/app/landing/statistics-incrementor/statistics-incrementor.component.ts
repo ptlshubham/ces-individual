@@ -13,7 +13,7 @@ export class StatisticsIncrementorComponent implements OnInit {
 
   projectCountStop: any = setInterval(() => {
     this.projectCount++;
-    if (this.projectCount == 106) {
+    if (this.projectCount == 107) {
       clearInterval(this.projectCountStop);
     }
   }, 60)
