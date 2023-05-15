@@ -14594,7 +14594,7 @@ body .modal-backdrop {
   background: rgba(255, 255, 255, 0.1);
 }
 .rs-footer.home9-style.main-home.home13-style {
-  background: url(src/assets/images/bg/home13/footer.jpg);
+  /* background: url(src/assets/images/bg/home13/footer.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
 }
