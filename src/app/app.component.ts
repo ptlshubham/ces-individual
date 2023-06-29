@@ -34,5 +34,5 @@ export class AppComponent implements OnInit {
       localStorage.setItem('InstituteURL', res[0].url);
     })
   }
-  title = 'ces-society';
+  title = 'ce-society';
 }
