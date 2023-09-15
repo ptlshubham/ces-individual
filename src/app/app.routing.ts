@@ -1,6 +1,8 @@
 import { Routes } from '@angular/router';
 import { AlumniComponent } from './alumni/alumni.component';
 import { SocialActivityComponent } from './social-activity/social-activity.component';
+import { NavratriComponent } from './navratri/navratri.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 export const AppRoutes: Routes = [
@@ -21,7 +23,15 @@ export const AppRoutes: Routes = [
         component: AlumniComponent
     },
     {
-        path:'social-activity',
-        component:SocialActivityComponent
-    }
+        path: 'social-activity',
+        component: SocialActivityComponent
+    },
+    {
+        path: 'navratri',
+        component: NavratriComponent
+    },
+    {
+        path: '**', pathMatch: 'full',
+        component: PageNotFoundComponent
+    },
 ];
