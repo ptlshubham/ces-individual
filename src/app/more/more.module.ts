@@ -18,6 +18,7 @@ import { DeliveryShippingComponent } from './delivery-shipping/delivery-shipping
 import { RefundCancellationComponent } from './refund-cancellation/refund-cancellation.component';
 import { PricingStructureComponent } from './pricing-structure/pricing-structure.component';
 import { AnswerKeyComponent } from './answer-key/answer-key.component';
+import { CareerComponent } from './career/career.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { AnswerKeyComponent } from './answer-key/answer-key.component';
     RefundCancellationComponent,
     PricingStructureComponent,
     AnswerKeyComponent,
+    CareerComponent,
   ],
   imports: [
     CommonModule,

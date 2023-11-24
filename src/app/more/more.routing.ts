@@ -10,6 +10,7 @@ import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.componen
 import { RefundCancellationComponent } from './refund-cancellation/refund-cancellation.component';
 import { SearchComponent } from './search/search.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
+import { CareerComponent } from './career/career.component';
 export const MoreRoutes: Routes = [{
     path: '',
     children: [
@@ -56,6 +57,10 @@ export const MoreRoutes: Routes = [{
         {
             path:'answer-key',
             component:AnswerKeyComponent
+        },
+        {
+            path:'career',
+            component:CareerComponent
         }
     ]
 }];
