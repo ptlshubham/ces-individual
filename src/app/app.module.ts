@@ -16,6 +16,7 @@ import { DlDateTimeDateModule, DlDateTimePickerModule } from 'angular-bootstrap-
 import { SocialActivityComponent } from './social-activity/social-activity.component';
 import { NavratriComponent } from './navratri/navratri.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PhotoContestComponent } from './photo-contest/photo-contest.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AlumniComponent,
     SocialActivityComponent,
     NavratriComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PhotoContestComponent
   ],
   imports: [
     BrowserModule,

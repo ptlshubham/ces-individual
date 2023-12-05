@@ -66,7 +66,6 @@ export class HomeService {
         return this.http.post<any>(ApiService.uploadInfraImageURL, img);
     }
     saveInfrastructureDetails(data: any) {
-
         return this.http.post(ApiService.saveInfrastructureDetailsURL, data);
     }
     getImfraDetails(id: any) {
@@ -102,5 +101,14 @@ export class HomeService {
     }
     saveCounselingDetail(data: any) {
         return this.http.post(ApiService.saveCounselingDetailsURL, data);
+    }
+    uploadContestImage(img: any): Observable<any> {
+        return this.http.post<any>(ApiService.uploadPhotoContestImageURL, img);
+    }
+    uploadMultiContestImage(img: any): Observable<any> {
+        return this.http.post<any>(ApiService.uploadContestMultiImageURL, img);
+    }
+    saveContestDetails(data: any) {
+        return this.http.post(ApiService.savePhotoContestDetailsURL, data);
     }
 }

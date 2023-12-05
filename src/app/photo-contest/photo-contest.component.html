@@ -1,0 +1,189 @@
+<app-navbar></app-navbar>
+
+<body class="defult-home">
+    <div class="main-content">
+        <section class="intro-section rs-checkout  gray-bg pt-94 pb-100 md-pt-64 md-pb-70">
+            <div class="container">
+                <div class="row clearfix">
+                    <div class="intro-info-tabs">
+                        <div class="tab-content tabs-content" id="myTabContent">
+                            <div class="tab-pane tab fade show active" id="prod-Photo" role="tabpanel"
+                                aria-labelledby="prod-Photo-tab">
+                                <div class="content white-bg pt-30">
+                                    <div class="course-overview">
+                                        <div class="inner-box ">
+                                            <div class="full-grid">
+                                                <div class="row">
+                                                    <div class="text-center">
+                                                        <img src="assets/images/photo.jpg" alt="Photo Contest">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <form [formGroup]="form">
+                                                        <div class="billing-fields">
+                                                            <div class="checkout-title mt-5">
+                                                                <h3>Enter Contestants Details</h3>
+                                                            </div>
+                                                            <div class="form-content-box">
+                                                                <div class="row">
+                                                                    <div class="col-xl-4 col-lg-4 col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>
+                                                                                Name</label>
+                                                                            <input id="name" name="name"
+                                                                                class="form-control-mod" type="text"
+                                                                                formControlName="name"
+                                                                                class="form-control"
+                                                                                [ngClass]="{ 'is-invalid': submitted && f['name'].errors }"
+                                                                                [(ngModel)]="photoContestModel.name"
+                                                                                placeholder="Enter Name">
+                                                                            <div *ngIf="submitted && f['name'].errors"
+                                                                                class="invalid-feedback">
+                                                                                <div
+                                                                                    *ngIf="f['name'].errors['required']">
+                                                                                    Name
+                                                                                    is
+                                                                                    required
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-4 col-lg-4 col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Contact
+                                                                                Number</label>
+                                                                            <input id="contact" name="contact"
+                                                                                class="form-control-mod" type="number"
+                                                                                formControlName="contact"
+                                                                                class="form-control"
+                                                                                [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }"
+                                                                                [(ngModel)]="photoContestModel.contact"
+                                                                                placeholder="Enter Contact Number">
+                                                                            <div *ngIf="submitted && f['contact'].errors"
+                                                                                class="invalid-feedback">
+                                                                                <div
+                                                                                    *ngIf="f['contact'].errors['required']">
+                                                                                    Contact
+                                                                                    is
+                                                                                    required
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-4 col-lg-4 col-md-4">
+                                                                        <div class="form-group">
+                                                                            <label>Birthday Date</label>
+                                                                            <input type="date" class="form-control"
+                                                                                formControlName="birthday"
+                                                                                [ngClass]="{ 'is-invalid': submitted && f['birthday'].errors }"
+                                                                                placeholder="Select Date" bsDatepicker
+                                                                                [(ngModel)]="photoContestModel.birthday"
+                                                                                formControlName="birthday">
+                                                                            <div *ngIf="submitted && f['birthday'].errors"
+                                                                                class="invalid-feedback">
+                                                                                <div
+                                                                                    *ngIf="f['birthday'].errors['required']">
+                                                                                    Date of Birth
+                                                                                    is
+                                                                                    required
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-4 col-lg-4 col-md-4 mt-4">
+                                                                        <div class="form-group mb-3">
+                                                                            <label>Upload Image</label>
+                                                                            <div class="avatar-upload">
+                                                                                <div class="avatar-edit">
+                                                                                    <input type='file' id="imageUpload"
+                                                                                        accept=".png, .jpg, .jpeg"
+                                                                                        #fileInput
+                                                                                        (change)="uploadFile($event)" />
+                                                                                </div>
+                                                                                <div class="avatar-preview">
+                                                                                    <div id="imagePreview"
+                                                                                        [style.backgroundImage]="'url('+ imageUrl +')'">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div style="margin-top: 10px;">
+                                                                                    <button type="submit"
+                                                                                        class="btn btn-primary btn-sm btn-block"
+                                                                                        (click)="fileInput.click()">Upload
+                                                                                        Image</button>
+                                                                                    <button type="submit"
+                                                                                        class="btn btn-danger btn-sm btn-block">Remove
+                                                                                        Image</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xl-4 col-lg-4 col-md-4 mt-4"
+                                                                        *ngFor="let i of addMultiImg; let ind=index">
+                                                                        <div class="form-group mb-3">
+                                                                            <label>Upload Image</label>
+                                                                            <div class="avatar-upload">
+                                                                                <div class="avatar-edit">
+                                                                                    <input type='file' id="imageUpload"
+                                                                                        accept=".png, .jpg, .jpeg"
+                                                                                        #multiFileInput
+                                                                                        (change)="uploadMultiFile($event,ind)" />
+                                                                                </div>
+                                                                                <div class="avatar-preview">
+                                                                                    <div id="imagePreview"
+                                                                                        [style.backgroundImage]="'url('+ i.multiImageUrl +')'">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div style="margin-top: 10px;">
+                                                                                    <button type="submit"
+                                                                                        class="btn btn-primary btn-sm btn-block"
+                                                                                        (click)="multiFileInput.click()">Upload
+                                                                                        Image</button>
+                                                                                    <button type="submit"
+                                                                                        class="btn btn-danger btn-sm btn-block"
+                                                                                        (click)="removeServiceList(ind)">Remove
+                                                                                        Image</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div
+                                                                        class="col-xl-1 col-lg-1 col-md-1 col-md-1 d-flex align-items-center justify-content-center">
+                                                                        <div class="form-group mb-3">
+                                                                            <i class="fa fa-plus c-icon"
+                                                                                (click)="addMultiList()"></i>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row mt-20">
+                                                                    <div class="form-group">
+                                                                        <div class="row">
+                                                                            <div class="col-textend text-end">
+                                                                                <button class="btn btn-primary btn-send"
+                                                                                    type="submit"
+                                                                                    [disabled]="form.invalid || contestImage==null"
+                                                                                    (click)="savePhotoDetails()">Submit</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <footer id="rs-footer" class="rs-footer">
+        <app-footer></app-footer>
+    </footer>
+</body>

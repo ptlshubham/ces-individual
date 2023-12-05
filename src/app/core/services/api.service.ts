@@ -7,7 +7,6 @@ declare var $: any;
 })
 export class ApiService {
   // public static HOST_URL: string = "http://localhost:9000";
-  // public static HOST_URL: string = "https://bapsanandmandir.co.in";
   public static HOST_URL: string = "https://api.cesociety.in";
 
   toasts: any[] = [];
@@ -75,7 +74,9 @@ export class ApiService {
   public static getGatePassUserListURL: string = ApiService.HOST_URL + '/admin/GetGatePassUserList';
   public static getRahatokarshDonationListURL: string = ApiService.HOST_URL + '/admin/GetRahatokarshDonationList';
 
-
+  public static uploadPhotoContestImageURL: string = ApiService.HOST_URL + '/admin/UploadPhotoContestImage';
+  public static uploadContestMultiImageURL: string = ApiService.HOST_URL + '/admin/UploadContestMultiImage';
+  public static savePhotoContestDetailsURL: string = ApiService.HOST_URL + '/admin/SavePhotoContestDetails';
 
   public static adminLoginURL: string = ApiService.HOST_URL + '/authenticate/adminLogin';
 

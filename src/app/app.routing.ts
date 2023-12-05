@@ -3,6 +3,7 @@ import { AlumniComponent } from './alumni/alumni.component';
 import { SocialActivityComponent } from './social-activity/social-activity.component';
 import { NavratriComponent } from './navratri/navratri.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PhotoContestComponent } from './photo-contest/photo-contest.component';
 
 
 export const AppRoutes: Routes = [
@@ -29,6 +30,10 @@ export const AppRoutes: Routes = [
     {
         path: 'navratri',
         component: NavratriComponent
+    },
+    {
+        path: 'photo',
+        component: PhotoContestComponent
     },
     {
         path: '**', pathMatch: 'full',
