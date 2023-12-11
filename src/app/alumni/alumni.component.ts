@@ -64,9 +64,9 @@ export class AlumniComponent implements OnInit {
     }
     this.homeService.saveAlumniDetail(this.alumniModel).subscribe((res: any) => {
       if (res == 'success') {
+        this.toastrMessage.success('Alumni data added Successfully.', 'Success', { timeOut: 3000, });
         this.submitted = false;
         this.alumniModel = {};
-        this.toastrMessage.success('Alumni data added Successfully.', 'Success', { timeOut: 3000, });
       }
 
     })
