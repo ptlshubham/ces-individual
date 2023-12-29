@@ -16,52 +16,53 @@ import { MicroDonnerListComponent } from './micro-donner-list/micro-donner-list.
 export const BasicRoutes: Routes = [{
     path: '',
     children: [
-    // {
-    //     path: 'history',
-    //     component: HistoryComponent
-    // },
-    {
-        path: 'about',
-        component: AboutComponent
-    },
-    {
-        path: 'management',
-        component: ManagementComponent
-    },
-    {
-        path: 'fund',
-        component: FundComponent
-    },
-    {
-        path: 'celebration',
-        component: CelebrationComponent
-    },
-    {
-        path: 'counselling',
-        component: CounsellingComponent
-    },
-    {
-        path: 'bearers',
-        component: BearersComponent
-    },
-    {
-        path: 'contact',
-        component: ContactComponent
-    },
-    {
-        path:'beneficiary-students',
-        component:BeneficiaryStudentsComponent
-    },
-    {
-        path:'donner-list',
-        component:DonnerListComponent
-    },
-    {
-        path:'donation',
-        component:MicroDonationComponent
-    },{
-        path:'micro-donner',
-        component:MicroDonnerListComponent
-    }
+        // {
+        //     path: 'history',
+        //     component: HistoryComponent
+        // },
+        {
+            path: 'about',
+            component: AboutComponent
+        },
+        {
+            path: 'management',
+            component: ManagementComponent
+        },
+        {
+            path: 'fund',
+            component: FundComponent
+        },
+        {
+            path: 'celebration',
+            component: CelebrationComponent
+        },
+        {
+            path: 'counselling',
+            component: CounsellingComponent
+        },
+        {
+            path: 'bearers',
+            component: BearersComponent
+        },
+        {
+            path: 'contact',
+            component: ContactComponent
+        },
+        {
+            path: 'beneficiary-students',
+            component: BeneficiaryStudentsComponent
+        },
+        {
+            path: 'donner-list',
+            component: DonnerListComponent
+        },
+        {
+            path: 'donation',
+            component: MicroDonationComponent
+        }, 
+        {
+            path: 'micro-donner',
+            component: MicroDonnerListComponent
+        }
     ]
 }];

@@ -3,34 +3,37 @@
 <body class="defult-home">
     <div class="main-content">
         <div class="rs-breadcrumbs breadcrumbs-overlay">
-            <div class="breadcrumbs-img">
-                <img src="./assets/images/slider/1.jpg" alt="Breadcrumbs Image">
+            <div class="breadcrumbs-img md-pt-75">
+                <div class="bread"></div>
             </div>
             <div class="breadcrumbs-text white-color">
-                <h1 class="page-title">Micro Donor List</h1>
+                <h1 class="page-title">&nbsp;</h1>
                 <ul>
                     <li>
-                        <a class="active" routerLink="/home/main" routerLinkActive="active">Home</a>
                     </li>
-                    <li>Micro Donor List</li>
+                    <li>&nbsp;</li>
                 </ul>
             </div>
         </div>
-        <div class="rs-inner-blog orange-color pt-100 md-pt-70 md-pb-70">
+        <div class="rs-inner-blog orange-color pt-20 md-pt-70 md-pb-100 mb-30">
             <div class="container">
                 <div class="blog-deatails">
                     <div class="intro-info-tabs intro-section gray-bg ">
                         <div class="content">
                             <div id="accordion" class="accordion-box">
                                 <div class="blog-full">
-                                    <h4 style="color: red;text-align: center;" *ngIf="donnerData.length==0">
+                                    <h4 style="color: red;text-align: center;" *ngIf="donnerList.length==0">
                                         Data
                                         Not Found !</h4>
-                                    <div class="blog-desc" *ngIf="donnerData.length>0">
+                                    <div class="blog-desc" *ngIf="donnerList.length>0">
                                         <div class="title mb-40 md-mb-15">
                                             <div class="row">
-                                                <div class="col">
+
+                                                <div class="d-flex justify-content-between">
                                                     <h3 class="text-part">Micro Donor List</h3>
+                                                    <!-- <a class="btn-send"
+                                                        routerLink="/donation"><i class="fa fa-inr"
+                                                            aria-hidden="true"></i> Donate Now</a> -->
                                                 </div>
 
                                             </div>
@@ -39,30 +42,29 @@
                                             <table class="table">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">Sr No.</th>
-                                                        <th scope="col">Date</th>
-                                                        <th scope="col">Certificate Number</th>
-                                                        <th scope="col">Name Of Donor</th>
-                                                        <th scope="col">Amount</th>
+                                                        <th scope="col" class="text-center">Sr No.</th>
+                                                        <th scope="col" class="text-center">Date</th>
+                                                        <th scope="col" class="text-center">Name Of Donor</th>
+                                                        <th scope="col" class="text-center">City</th>
+                                                        <th scope="col" class="text-center">Amount</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
                                                     <tr
-                                                        *ngFor="let c of donnerData | paginate: { id:'listing',itemsPerPage: 50, currentPage: p };let i=index">
-                                                        <th scope="row">{{c.index}}</th>
-                                                        <td>{{c.createddate |date}}</td>
-                                                        <td>0000{{c.id}}</td>
-                                                        <td>{{c.name}}</td>
-                                                        <td>{{c.amount}}</td>
+                                                        *ngFor="let c of donnerList | paginate: { id:'listing',itemsPerPage: 50, currentPage: p };let i=index">
+                                                        <th scope="row" class="text-center">{{c.index}}</th>
+                                                        <td class="text-center">{{c.createddate |date}}</td>
+                                                        <td class="text-center">{{c.name}}</td>
+                                                        <td class="text-center">{{c.city}}</td>
+                                                        <td class="text-center">{{c.amount}} ₹</td>
                                                     </tr>
                                                 </tbody>
 
                                             </table>
-                                            <div class="row mt-3" *ngIf="donnerData.length>0">
+                                            <div class="row mt-3" *ngIf="donnerList.length>0">
                                                 <div class="row">
                                                     <div class="col text-end">
-                                                        <pagination-controls id="listing"
-                                                            (pageChange)="p = $event">
+                                                        <pagination-controls id="listing" (pageChange)="p = $event">
                                                         </pagination-controls>
                                                     </div>
                                                 </div>

@@ -7,7 +7,6 @@ import { DonationService } from 'src/app/core/services/donation.service';
   styleUrls: ['./micro-donner-list.component.css']
 })
 export class MicroDonnerListComponent implements OnInit {
-  donnerData: any = [];
   donnerList: any = [];
   p: number = 0;
 
@@ -19,16 +18,12 @@ export class MicroDonnerListComponent implements OnInit {
     this.getMicroDonnerDetails();
   }
   getMicroDonnerDetails() {
-    this.donnerData = [];
+    this.donnerList = [];
     this.donationService.getVerifiedMicroDonnerDetails().subscribe((res: any) => {
       this.donnerList = res;
-      this.donnerList.forEach((element: any) => {
-        if (element.isactive == true) {
-          this.donnerData.push(element);
-        }
-      });
-      for (let i = 0; i < this.donnerData.length; i++) {
-        this.donnerData[i].index = i + 1;
+      
+      for (let i = 0; i < this.donnerList.length; i++) {
+        this.donnerList[i].index = i + 1;
       }
     })
   }

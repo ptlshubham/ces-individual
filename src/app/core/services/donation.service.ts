@@ -1,7 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ApiService } from './api.service';
-import { Observable } from 'rxjs';
+
+function _window(): any {
+    // return the global native browser window object
+    return window;
+}
 
 @Injectable({ providedIn: 'root' })
 export class DonationService {
@@ -9,6 +13,9 @@ export class DonationService {
         private http: HttpClient
     ) { }
 
+    get nativeWindow(): any {
+        return _window();
+    }
 
     saveDonnerDetails(data: any) {
 
@@ -18,7 +25,7 @@ export class DonationService {
     getAllDonnerDetailsData() {
         return this.http.get(ApiService.getAllDonnerListURL);
     }
-    
+
     saveBulkDonnersDetails(data: any) {
 
         return this.http.post(ApiService.saveBulkDonnersDetailsURL, data);
@@ -45,7 +52,7 @@ export class DonationService {
 
         return this.http.post(ApiService.saveBulkBeneficiaryDetailsURL, data);
     }
-    getVerifiedMicroDonnerDetails(){
+    getVerifiedMicroDonnerDetails() {
         return this.http.get(ApiService.getRahatokarshDonationListURL);
     }
 }

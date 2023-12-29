@@ -8,3 +8,7 @@
     color: white;
     background-color: #203154;
 }
+.bread{
+    content: url('../../../assets/images/slider/objective.jpg');
+    width: 100%;
+  }

@@ -75,6 +75,7 @@ export class HomeService {
         return this.http.post(ApiService.SaveAlumniDetailsURL, data);
     }
     saveDonationDetails(data:any){
+        debugger
         return this.http.post(ApiService.saveRahatokarshDonationURL, data);
     }
     saveGatePassDetail(data: any) {
@@ -110,5 +111,8 @@ export class HomeService {
     }
     saveContestDetails(data: any) {
         return this.http.post(ApiService.savePhotoContestDetailsURL, data);
+    }
+    uploadTax80Image(img: any): Observable<any> {
+        return this.http.post<any>(ApiService.upload80GTaxImageURL, img);
     }
 }

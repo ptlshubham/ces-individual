@@ -4,45 +4,37 @@
     <div class="main-content">
         <!-- Breadcrumbs Start -->
         <div class="rs-breadcrumbs breadcrumbs-overlay">
-            <div class="breadcrumbs-img">
-                <img src="./assets/images/slider/1.jpg" alt="Breadcrumbs Image">
+            <div class="breadcrumbs-img md-pt-75">
+                 <div class="bread"></div>
             </div>
             <div class="breadcrumbs-text white-color">
-                <h1 class="page-title">Rahatokarsh Fund Donation</h1>
+                <h1 class="page-title">&nbsp;</h1>
                 <ul>
                     <li>
-                        <a class="active" routerLink="/home/main" routerLinkActive="active">Home</a>
                     </li>
-                    <li>Rahatokarsh Fund Donation</li>
+                    <li>&nbsp;</li>
                 </ul>
             </div>
         </div>
         <section class="intro-section rs-checkout  gray-bg pt-44 pb-10 md-pt-64 md-pb-10">
             <div class="container">
                 <div class="row clearfix">
-                    <!-- Content Column -->
-                    <div class="col-lg-12 md-mb-50">
-                        <!-- Intro Info Tabs-->
+                    <div class="col-lg-12 md-mb-30">
                         <div class="intro-info-tabs">
-
                             <div class="tab-content tabs-content" id="myTabContent">
                                 <div class="tab-pane tab fade show active" id="prod-Photo" role="tabpanel"
                                     aria-labelledby="prod-Photo-tab">
                                     <div class="content white-bg pt-10 ">
-                                        <!-- Cource Overview -->
                                         <div class="course-overview">
                                             <div class="inner-box ">
                                                 <div class="full-grid">
-
                                                     <div class="billing-fields">
                                                         <div class="checkout-title">
                                                             <h3 style="text-align: center;">“દાનયજ્ઞ”</h3>
                                                         </div>
                                                         <div class="form-content-box"
                                                             style="margin-bottom: 10px !important">
-
                                                             <div class="row">
-
                                                                 <p style="color: black;padding-top: 10px">
                                                                     ફૂલ નહીં તો ફૂલની પાંખડી – એવા ઉમદા અભિગમ સાથે આપ
                                                                     સૌને આ “દાનયજ્ઞ” માં ચરોતર એજ્યુકેશન સોસાયટી આવકારે
@@ -50,48 +42,40 @@
                                                                     આ ઉમદા અભિગમનો મૂળ હેતુ જરૂરિયાતમંદ વિદ્યાર્થીઓને
                                                                     શિક્ષણ સહાય કરવા માટે છે.
                                                                     ટીપે ટીપે સરોવર ભરાય તેમ, આપના તરફથી જમા થયેલી નજીવી
-                                                                    રકમ (રૂા. 05 થી ..................) તેઓના જીવન
+                                                                    રકમ તેઓના જીવન
                                                                     ઘડતરમાં વિશેષ પ્રોત્સાહક બની રહેશે.<br>
                                                                     <b style="color: red;">આપે કરેલું દાન ચરોતર
                                                                         એજ્યુકેશન સોસાયટીની વેબસાઇટ પર આપની સંપૂર્ણ
                                                                         માહિતી સાથે દર્શાવવામાં આવશે તેમજ આપેલ દાનનું
-                                                                        ઇ-પ્રમાણત્ર આપવામાં આવશે</b>
+                                                                        ઇ-પ્રમાણત્ર આપવામાં આવશે.</b>
                                                                 </p>
-
-
-
                                                             </div>
-
+                                                            <div class="row mt-20">
+                                                                <div class="col text-center">
+                                                                    <a class="btn btn-sm btn-outline-white mb-0"
+                                                                        routerLink="/micro-donner"><i class="fa fa-eye"
+                                                                            aria-hidden="true"></i> View Donners</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="intro-section rs-checkout  gray-bg pt-44 pb-100 md-pt-64 md-pb-70">
-            <div class="container">
                 <div class="row clearfix">
-                    <!-- Content Column -->
                     <div class="col-lg-12 md-mb-50">
-                        <!-- Intro Info Tabs-->
                         <div class="intro-info-tabs">
-
                             <div class="tab-content tabs-content" id="myTabContent">
                                 <div class="tab-pane tab fade show active" id="prod-Photo" role="tabpanel"
                                     aria-labelledby="prod-Photo-tab">
-                                    <div class="content white-bg pt-30">
-                                        <!-- Cource Overview -->
-                                        <div class="course-overview" *ngIf="donate==false">
+                                    <div class="content white-bg pt-10">
+                                        <div class="course-overview">
                                             <div class="inner-box ">
                                                 <div class="full-grid">
                                                     <form [formGroup]="form">
@@ -100,7 +84,6 @@
                                                                 <h3>Rahatokarsh Micro Donation</h3>
                                                             </div>
                                                             <div class="form-content-box">
-
                                                                 <div class="row">
                                                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                                                         <div class="form-group">
@@ -110,12 +93,12 @@
                                                                                 formControlName="donnerName"
                                                                                 [ngClass]="{ 'is-invalid': submitted && f['donnerName'].errors }"
                                                                                 [(ngModel)]="donationModel.donnerName"
-                                                                                placeholder="Enter Donner Name">
+                                                                                placeholder="Enter Donner Full Name">
                                                                             <div *ngIf="submitted && f['donnerName'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
                                                                                     *ngIf="f['donnerName'].errors['required']">
-                                                                                    Donner Name
+                                                                                    Donner Full Name
                                                                                     is
                                                                                     required
                                                                                 </div>
@@ -129,7 +112,7 @@
                                                                                 class="form-control-mod" type="number"
                                                                                 formControlName="contact"
                                                                                 [ngClass]="{ 'is-invalid': submitted && f['contact'].errors }"
-                                                                                [(ngModel)]="donationModel.contactNumber"
+                                                                                [(ngModel)]="donationModel.contact"
                                                                                 placeholder="Enter Contact Number">
                                                                             <div *ngIf="submitted && f['contact'].errors"
                                                                                 class="invalid-feedback">
@@ -162,76 +145,104 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
-
                                                                         <div class="form-group">
-                                                                            <label>Donation Amount</label>
-                                                                            <!-- <input id="donationAmount"
-                                                                                name="donationAmount"
-                                                                                class="form-control-mod" type="number"
-                                                                                formControlName="donationAmount"
-                                                                                [ngClass]="{ 'is-invalid': submitted && f['donationAmount'].errors }"
-                                                                                [(ngModel)]="donationModel.donationAmount"
-                                                                                placeholder="Enter Donation Amount"> -->
-                                                                            <div ngbDropdown class="d-inline-block">
-                                                                                <button type="button"
-                                                                                    class="btn btn-outline-primary"
-                                                                                    id="dropdownBasic1"
-                                                                                    ngbDropdownToggle>
-                                                                                    {{selectedAmount}}
-                                                                                </button>
-                                                                                <div ngbDropdownMenu
-                                                                                    aria-labelledby="dropdownBasic1">
-                                                                                    <button ngbDropdownItem
-                                                                                        disabled>Select Donation
-                                                                                        Amount</button>
-                                                                                    <div *ngFor="let y of amount">
-
-                                                                                        <button ngbDropdownItem
-                                                                                            on-click="selectDonationAmount(y.amount)">{{y.amount}}</button>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div *ngIf="submitted && f['donationAmount'].errors"
+                                                                            <label>Donner City</label>
+                                                                            <input id="city" name="city"
+                                                                                class="form-control-mod" type="text"
+                                                                                formControlName="city"
+                                                                                [ngClass]="{ 'is-invalid': submitted && f['city'].errors }"
+                                                                                [(ngModel)]="donationModel.city"
+                                                                                placeholder="Enter Donner City">
+                                                                            <div *ngIf="submitted && f['city'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
-                                                                                    *ngIf="f['donationAmount'].errors['required']">
-                                                                                    Donation Amount
+                                                                                    *ngIf="f['city'].errors['required']">
+                                                                                    Donner City
                                                                                     is
                                                                                     required
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                    <!-- <div class="col-md-6 col-sm-12 col-xs-12">
+                                                                    <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <label>Donner Address</label>
-
-                                                                            <textarea class="from-control" id="address"
-                                                                                name="address"
-                                                                                placeholder="Enter Donner Address"
-                                                                                formControlName="address"
-                                                                                [ngClass]="{ 'is-invalid': submitted && f['address'].errors }"
-                                                                                [(ngModel)]="donationModel.address"></textarea>
-                                                                            <div *ngIf="submitted && f['address'].errors"
+                                                                            <label>Donation Amount <span
+                                                                                    style="color: red; font-size: 12px;">(Minimum
+                                                                                    ₹10)</span></label>
+                                                                            <input id="donationAmount"
+                                                                                name="donationAmount"
+                                                                                class="form-control-mod" type="number"
+                                                                                formControlName="donationAmount"
+                                                                                [ngClass]="{ 'is-invalid': submitted && (f['donationAmount'].errors || donationModel.donationAmount < 10) }"
+                                                                                [(ngModel)]="donationModel.donationAmount"
+                                                                                placeholder="Enter Donation Amount"
+                                                                                min="10">
+                                                                            <div *ngIf="submitted && f['donationAmount'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
-                                                                                    *ngIf="f['address'].errors['required']">
-                                                                                    Donner Address
-                                                                                    is
-                                                                                    required
+                                                                                    *ngIf="f['donationAmount'].errors['required']">
+                                                                                    Donation Amount is required
+                                                                                </div>
+                                                                            </div>
+                                                                            <div *ngIf="submitted && donationModel.donationAmount < 10"
+                                                                                class="invalid-feedback">
+                                                                                Donation Amount must be at least 10 rs
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-check pt-12" style="padding-left: 0">
+                                                                    <label class="form-check-label">
+                                                                        <input type="checkbox" class="form-control-mod"
+                                                                            [(ngModel)]="benefitUnder80G"
+                                                                            formControlName="benefit"
+                                                                            name="benefit" id="benefit">
+                                                                        Do you want benefit under Section <b>80G</b> of
+                                                                        the <b>Indian Income Tax Act</b>?
+                                                                    </label>
+                                                                </div>
+
+                                                                <div class="row">
+                                                                    <div class="col-xl-4 col-lg-4 col-md-4 mt-4"
+                                                                        *ngIf="benefitUnder80G">
+                                                                        <div class="form-group mb-3">
+                                                                            <label>Upload Id Proof <span
+                                                                                    style="color: red;">(Aadharcard or
+                                                                                    Pancard)</span></label>
+                                                                            <div class="avatar-upload">
+                                                                                <div class="avatar-edit">
+                                                                                    <input type='file' id="imageUpload"
+                                                                                        accept=".png, .jpg, .jpeg"
+                                                                                        #fileInput
+                                                                                        (change)="uploadFile($event)" />
+                                                                                </div>
+                                                                                <div class="avatar-preview">
+                                                                                    <div id="imagePreview"
+                                                                                        [style.backgroundImage]="'url('+ imageUrl +')'">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div style="margin-top: 10px;">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-primary btn-sm btn-block"
+                                                                                        (click)="fileInput.click()">Upload
+                                                                                        Image</button>
+                                                                                    <button type="button"
+                                                                                        class="btn btn-danger btn-sm btn-block">Remove
+                                                                                        Image</button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
-                                                                    </div> -->
+                                                                    </div>
                                                                 </div>
+
                                                                 <div class="row mt-20">
-
                                                                     <div class="col text-center">
-                                                                        <a class="btn btn-sm btn-outline-white mb-0"
-                                                                            (click)="saveDonationData()">Submit <i
-                                                                                class="fa fa-arrow-right"
-                                                                                aria-hidden="true"></i></a>
-
+                                                                        <button (click)="payNow()"
+                                                                            class="btn btn-sm btn-outline-white mb-0"
+                                                                            [disabled]="form.invalid"><i
+                                                                                class="fa fa-inr"
+                                                                                aria-hidden="true"></i> Donate
+                                                                            Now</button>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -240,26 +251,15 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-lg-3 offset-lg-5 mb-40" *ngIf="donate==true">
-                                                <a href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=5384016"
-                                                    target="_blank" class="btn btn-sm btn-outline-white mb-0"><i
-                                                        class="fa fa-inr" aria-hidden="true"></i> Donate Now</a>
-                                            </div>
-                                        </div>
-
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
     </div>
-
     <footer id="rs-footer" class="rs-footer">
         <app-footer></app-footer>
     </footer>

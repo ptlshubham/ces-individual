@@ -45,6 +45,9 @@ import { MicroDonnerListComponent } from './micro-donner-list/micro-donner-list.
     NgbDropdownModule,
     FormsModule,
     ReactiveFormsModule
+  ],
+  exports:[
   ]
+
 })
 export class BasicModule { }

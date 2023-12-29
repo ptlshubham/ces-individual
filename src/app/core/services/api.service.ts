@@ -73,16 +73,17 @@ export class ApiService {
   public static saveGatePassUserListURL: string = ApiService.HOST_URL + '/admin/SaveGatePassUserList';
   public static getGatePassUserListURL: string = ApiService.HOST_URL + '/admin/GetGatePassUserList';
   public static getRahatokarshDonationListURL: string = ApiService.HOST_URL + '/admin/GetRahatokarshDonationList';
-
+  public static upload80GTaxImageURL: string = ApiService.HOST_URL + '/admin/Upload80GTaxImage';
+  
   public static uploadPhotoContestImageURL: string = ApiService.HOST_URL + '/admin/UploadPhotoContestImage';
   public static uploadContestMultiImageURL: string = ApiService.HOST_URL + '/admin/UploadContestMultiImage';
   public static savePhotoContestDetailsURL: string = ApiService.HOST_URL + '/admin/SavePhotoContestDetails';
 
   public static adminLoginURL: string = ApiService.HOST_URL + '/authenticate/adminLogin';
 
+  //RazorPay APIS
 
-  //Cashfree APIS
-  public static createCashfreeOrderURL: string = ApiService.HOST_URL + '/cashfree/createCashfreeOrder';
+  public static fetchPaymentURL: string = ApiService.HOST_URL + '/admin/fetchPayment/';
 
 
 
