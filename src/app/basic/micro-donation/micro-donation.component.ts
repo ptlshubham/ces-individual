@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, AbstractControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { DonationService } from 'src/app/core/services/donation.service';
 import { HomeService } from 'src/app/core/services/home.services';
@@ -40,7 +41,8 @@ export class MicroDonationComponent implements OnInit {
     private toastrMessage: ToastrService,
     private formBuilder: FormBuilder,
     private donationService: DonationService,
-    private razorpayService: RazorpayService
+    private razorpayService: RazorpayService,
+    public router: Router
 
   ) {
     this.getAllInstituteDetails();
@@ -91,7 +93,7 @@ export class MicroDonationComponent implements OnInit {
 
   options = {
     // "key": "rzp_test_2j2jo8TdvwxDZh",
-    "key": "",
+    "key": "rzp_live_leOKtvTfzPgxqJ",
     "amount": "",
     "currency": "INR",
     "name": "",
@@ -142,14 +144,15 @@ export class MicroDonationComponent implements OnInit {
     console.log(response);
     if (response.razorpay_payment_id) {
       this.paymentId = response.razorpay_payment_id;
-      this.toastrMessage.success('Payment successful Done.', 'Success', { timeOut: 3000, });
+      this.toastrMessage.success('Payment successfully Done.', 'Success', { timeOut: 3000, });
       this.donationModel.paymentId = this.paymentId;
       this.homeService.saveDonationDetails(this.donationModel).subscribe((res: any) => {
         if (res == 'success') {
           this.submitted = false;
           this.donationModel = {};
           this.imageUrl = "assets/images/file-upload-image.jpg"
-          this.toastrMessage.success('E-Certificate sent Successfully.', 'Success', { timeOut: 3000, });
+          this.toastrMessage.success('E-Certificate sent on mentioned email.', 'Success', { timeOut: 5000, });
+          // this.router.navigate(['/home/main']);
         }
       })
     } else {

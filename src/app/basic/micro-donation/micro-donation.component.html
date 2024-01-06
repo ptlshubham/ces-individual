@@ -93,12 +93,12 @@
                                                                                 formControlName="donnerName"
                                                                                 [ngClass]="{ 'is-invalid': submitted && f['donnerName'].errors }"
                                                                                 [(ngModel)]="donationModel.donnerName"
-                                                                                placeholder="Enter Donner Full Name">
+                                                                                placeholder="Enter Donor Full Name">
                                                                             <div *ngIf="submitted && f['donnerName'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
                                                                                     *ngIf="f['donnerName'].errors['required']">
-                                                                                    Donner Full Name
+                                                                                    Donor Full Name
                                                                                     is
                                                                                     required
                                                                                 </div>
@@ -146,18 +146,18 @@
                                                                     </div>
                                                                     <div class="col-md-6 col-sm-12 col-xs-12">
                                                                         <div class="form-group">
-                                                                            <label>Donner City</label>
+                                                                            <label>Donor City</label>
                                                                             <input id="city" name="city"
                                                                                 class="form-control-mod" type="text"
                                                                                 formControlName="city"
                                                                                 [ngClass]="{ 'is-invalid': submitted && f['city'].errors }"
                                                                                 [(ngModel)]="donationModel.city"
-                                                                                placeholder="Enter Donner City">
+                                                                                placeholder="Enter Donor City">
                                                                             <div *ngIf="submitted && f['city'].errors"
                                                                                 class="invalid-feedback">
                                                                                 <div
                                                                                     *ngIf="f['city'].errors['required']">
-                                                                                    Donner City
+                                                                                    Donor City
                                                                                     is
                                                                                     required
                                                                                 </div>
@@ -206,9 +206,7 @@
                                                                     <div class="col-xl-4 col-lg-4 col-md-4 mt-4"
                                                                         *ngIf="benefitUnder80G">
                                                                         <div class="form-group mb-3">
-                                                                            <label>Upload Id Proof <span
-                                                                                    style="color: red;">(Aadharcard or
-                                                                                    Pancard)</span></label>
+                                                                            <label>Upload Pancard</label>
                                                                             <div class="avatar-upload">
                                                                                 <div class="avatar-edit">
                                                                                     <input type='file' id="imageUpload"
