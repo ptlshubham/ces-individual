@@ -19,6 +19,7 @@ import { RefundCancellationComponent } from './refund-cancellation/refund-cancel
 import { PricingStructureComponent } from './pricing-structure/pricing-structure.component';
 import { AnswerKeyComponent } from './answer-key/answer-key.component';
 import { CareerComponent } from './career/career.component';
+import { SummerCampComponent } from './summer-camp/summer-camp.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { CareerComponent } from './career/career.component';
     PricingStructureComponent,
     AnswerKeyComponent,
     CareerComponent,
+    SummerCampComponent,
   ],
   imports: [
     CommonModule,

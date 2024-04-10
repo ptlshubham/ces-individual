@@ -11,6 +11,7 @@ import { RefundCancellationComponent } from './refund-cancellation/refund-cancel
 import { SearchComponent } from './search/search.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { CareerComponent } from './career/career.component';
+import { SummerCampComponent } from './summer-camp/summer-camp.component';
 export const MoreRoutes: Routes = [{
     path: '',
     children: [
@@ -61,6 +62,10 @@ export const MoreRoutes: Routes = [{
         {
             path:'career',
             component:CareerComponent
+        },
+        {
+            path:'summer-camp',
+            component:SummerCampComponent
         }
     ]
 }];
