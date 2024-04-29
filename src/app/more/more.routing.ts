@@ -12,6 +12,7 @@ import { SearchComponent } from './search/search.component';
 import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 import { CareerComponent } from './career/career.component';
 import { SummerCampComponent } from './summer-camp/summer-camp.component';
+import { TendersComponent } from './tenders/tenders.component';
 export const MoreRoutes: Routes = [{
     path: '',
     children: [
@@ -66,6 +67,10 @@ export const MoreRoutes: Routes = [{
         {
             path:'summer-camp',
             component:SummerCampComponent
+        },
+        {
+            path:'tenders',
+            component:TendersComponent
         }
     ]
 }];

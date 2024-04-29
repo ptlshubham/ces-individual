@@ -20,6 +20,7 @@ import { PricingStructureComponent } from './pricing-structure/pricing-structure
 import { AnswerKeyComponent } from './answer-key/answer-key.component';
 import { CareerComponent } from './career/career.component';
 import { SummerCampComponent } from './summer-camp/summer-camp.component';
+import { TendersComponent } from './tenders/tenders.component';
 
 
 @NgModule({
@@ -37,6 +38,7 @@ import { SummerCampComponent } from './summer-camp/summer-camp.component';
     AnswerKeyComponent,
     CareerComponent,
     SummerCampComponent,
+    TendersComponent,
   ],
   imports: [
     CommonModule,
